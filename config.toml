@@ -1,7 +1,14 @@
-baseURL = 'https://kadrick.github.io/Blog/'
-languageCode = 'en-us'
-title = 'My New Hugo Site'
+baseURL = "https://kadrick.github.io/Blog/"
+languageCode = "en-us"
+title = "kadrick's Dev Log"
 theme = "hugo-theme-stack"
 
 [params.defaultImage.opengraph]
 enabled = false
+
+[params.sidebar]
+subtitle = "No pain, No gain"
+
+[params.sidebar.avatar]
+local = true
+src = "img/avatar.png"
