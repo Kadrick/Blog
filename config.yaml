@@ -156,14 +156,6 @@ params:
         page:
             - type: toc
 
-    opengraph:
-        twitter:
-            # Your Twitter username
-            site:
-
-            # Available values: summary, summary_large_image
-            card: summary_large_image
-
     defaultImage:
         opengraph:
             enabled: false
@@ -187,7 +179,29 @@ params:
 ### See https://docs.stack.jimmycai.com/configuration/custom-menu.html
 ### To remove about, archive and search page menu item, remove `menu` field from their FrontMatter
 menu:
-    main: []
+    main: 
+        - identifier: home
+          name: Home
+          weight: -100
+          params:
+            icon: home
+            newTab: false
+        
+        - identifier: archives
+          name: Archives
+          weight: -90
+          url: archives
+          params:
+            icon: archives
+            newTab: false
+
+        - identifier: search
+          name: Search
+          weight: -80
+          url: search
+          params:
+            icon: search
+            newTab: false
 
     social:
         - identifier: github

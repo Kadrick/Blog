@@ -1,7 +1,7 @@
 ---
-title: "{{ replace .Name "-" " " | title }}"
+title: "TestPost"
 description: 
-date: {{ .Date }}
+date: 2022-04-10T12:53:11+09:00
 image: 
 math: 
 license: 
@@ -9,3 +9,5 @@ hidden: false
 comments: true
 draft: true
 ---
+
+Test
