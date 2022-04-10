@@ -49,7 +49,7 @@ params:
 
     sidebar:
         emoji: 🍥
-        subtitle: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        subtitle: No pain, no gain
         avatar:
             enabled: true
             local: true
