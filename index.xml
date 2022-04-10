@@ -1,104 +1,13 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Kadrick's Dev Log</title><link>https://kadrick.github.io/Blog/</link><description>Recent content on Kadrick's Dev Log</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sun, 10 Apr 2022 12:53:11 +0900</lastBuildDate><atom:link href="https://kadrick.github.io/Blog/index.xml" rel="self" type="application/rss+xml"/><item><title>TestPost</title><link>https://kadrick.github.io/Blog/p/testpost/</link><pubDate>Sun, 10 Apr 2022 12:53:11 +0900</pubDate><guid>https://kadrick.github.io/Blog/p/testpost/</guid><description>&lt;p>Test&lt;/p>
-&lt;div class="highlight">&lt;div class="chroma">
-&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code>&lt;span class="lnt"> 1
-&lt;/span>&lt;span class="lnt"> 2
-&lt;/span>&lt;span class="lnt"> 3
-&lt;/span>&lt;span class="lnt"> 4
-&lt;/span>&lt;span class="lnt"> 5
-&lt;/span>&lt;span class="lnt"> 6
-&lt;/span>&lt;span class="lnt"> 7
-&lt;/span>&lt;span class="lnt"> 8
-&lt;/span>&lt;span class="lnt"> 9
-&lt;/span>&lt;span class="lnt">10
-&lt;/span>&lt;span class="lnt">11
-&lt;/span>&lt;span class="lnt">12
-&lt;/span>&lt;span class="lnt">13
-&lt;/span>&lt;span class="lnt">14
-&lt;/span>&lt;span class="lnt">15
-&lt;/span>&lt;span class="lnt">16
-&lt;/span>&lt;span class="lnt">17
-&lt;/span>&lt;span class="lnt">18
-&lt;/span>&lt;span class="lnt">19
-&lt;/span>&lt;span class="lnt">20
-&lt;/span>&lt;span class="lnt">21
-&lt;/span>&lt;span class="lnt">22
-&lt;/span>&lt;span class="lnt">23
-&lt;/span>&lt;span class="lnt">24
-&lt;/span>&lt;span class="lnt">25
-&lt;/span>&lt;span class="lnt">26
-&lt;/span>&lt;span class="lnt">27
-&lt;/span>&lt;span class="lnt">28
-&lt;/span>&lt;span class="lnt">29
-&lt;/span>&lt;span class="lnt">30
-&lt;/span>&lt;span class="lnt">31
-&lt;/span>&lt;span class="lnt">32
-&lt;/span>&lt;span class="lnt">33
-&lt;/span>&lt;span class="lnt">34
-&lt;/span>&lt;span class="lnt">35
-&lt;/span>&lt;span class="lnt">36
-&lt;/span>&lt;span class="lnt">37
-&lt;/span>&lt;span class="lnt">38
-&lt;/span>&lt;span class="lnt">39
-&lt;/span>&lt;span class="lnt">40
-&lt;/span>&lt;span class="lnt">41
-&lt;/span>&lt;span class="lnt">42
-&lt;/span>&lt;span class="lnt">43
-&lt;/span>&lt;span class="lnt">44
-&lt;/span>&lt;span class="lnt">45
-&lt;/span>&lt;span class="lnt">46
-&lt;/span>&lt;span class="lnt">47
-&lt;/span>&lt;span class="lnt">48
-&lt;/span>&lt;span class="lnt">49
-&lt;/span>&lt;span class="lnt">50
-&lt;/span>&lt;span class="lnt">51
-&lt;/span>&lt;span class="lnt">52
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td class="lntd">
-&lt;pre class="chroma">&lt;code class="language-go" data-lang="go">&lt;span class="cm">/**
-&lt;/span>&lt;span class="cm"> * @file 1069.go
-&lt;/span>&lt;span class="cm"> * @author kadrick (kbk2581553@gmail.com)
-&lt;/span>&lt;span class="cm"> * @brief math
-&lt;/span>&lt;span class="cm"> * @version 0.1
-&lt;/span>&lt;span class="cm"> * @date 2022-04-06 11:11
-&lt;/span>&lt;span class="cm"> *
-&lt;/span>&lt;span class="cm"> * @copyright Copyright (c) 2021
-&lt;/span>&lt;span class="cm"> *
-&lt;/span>&lt;span class="cm"> */&lt;/span>
-&lt;span class="kn">package&lt;/span> &lt;span class="nx">main&lt;/span>
-&lt;span class="kn">import&lt;/span> &lt;span class="p">(&lt;/span>
-&lt;span class="s">&amp;#34;fmt&amp;#34;&lt;/span>
-&lt;span class="s">&amp;#34;math&amp;#34;&lt;/span>
-&lt;span class="p">)&lt;/span>
-&lt;span class="kd">func&lt;/span> &lt;span class="nf">min&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">a&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">b&lt;/span> &lt;span class="kt">float64&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="kt">float64&lt;/span> &lt;span class="p">{&lt;/span>
-&lt;span class="k">if&lt;/span> &lt;span class="nx">a&lt;/span> &lt;span class="p">&amp;lt;&lt;/span> &lt;span class="nx">b&lt;/span> &lt;span class="p">{&lt;/span>
-&lt;span class="k">return&lt;/span> &lt;span class="nx">a&lt;/span>
-&lt;span class="p">}&lt;/span>
-&lt;span class="k">return&lt;/span> &lt;span class="nx">b&lt;/span>
-&lt;span class="p">}&lt;/span>
-&lt;span class="kd">func&lt;/span> &lt;span class="nf">main&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
-&lt;span class="kd">var&lt;/span> &lt;span class="nx">x&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">y&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">d&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">t&lt;/span> &lt;span class="kt">float64&lt;/span>
-&lt;span class="nx">fmt&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nf">Scan&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="o">&amp;amp;&lt;/span>&lt;span class="nx">x&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="o">&amp;amp;&lt;/span>&lt;span class="nx">y&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="o">&amp;amp;&lt;/span>&lt;span class="nx">d&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="o">&amp;amp;&lt;/span>&lt;span class="nx">t&lt;/span>&lt;span class="p">)&lt;/span>
-&lt;span class="nx">dist&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">ans&lt;/span> &lt;span class="o">:=&lt;/span> &lt;span class="nx">math&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nf">Sqrt&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">x&lt;/span>&lt;span class="o">*&lt;/span>&lt;span class="nx">x&lt;/span>&lt;span class="o">+&lt;/span>&lt;span class="nx">y&lt;/span>&lt;span class="o">*&lt;/span>&lt;span class="nx">y&lt;/span>&lt;span class="p">),&lt;/span> &lt;span class="mf">0.0&lt;/span>
-&lt;span class="c1">// case1: just walk
-&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="nx">ans&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="nx">dist&lt;/span>
-&lt;span class="nx">jump&lt;/span> &lt;span class="o">:=&lt;/span> &lt;span class="nx">math&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nf">Floor&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">dist&lt;/span> &lt;span class="o">/&lt;/span> &lt;span class="nx">d&lt;/span>&lt;span class="p">)&lt;/span>
-&lt;span class="nx">left&lt;/span> &lt;span class="o">:=&lt;/span> &lt;span class="nx">dist&lt;/span> &lt;span class="o">-&lt;/span> &lt;span class="nx">jump&lt;/span>&lt;span class="o">*&lt;/span>&lt;span class="nx">d&lt;/span>
-&lt;span class="c1">// case2: jump + walk
-&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="nx">ans&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="nf">min&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">ans&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">jump&lt;/span>&lt;span class="o">*&lt;/span>&lt;span class="nx">t&lt;/span>&lt;span class="o">+&lt;/span>&lt;span class="nx">left&lt;/span>&lt;span class="p">)&lt;/span>
-&lt;span class="c1">// case3: jump + 1
-&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="k">if&lt;/span> &lt;span class="nx">jump&lt;/span> &lt;span class="p">&amp;gt;&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="p">{&lt;/span>
-&lt;span class="nx">ans&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="nf">min&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">ans&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">jump&lt;/span>&lt;span class="o">+&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="o">*&lt;/span>&lt;span class="nx">t&lt;/span>&lt;span class="p">)&lt;/span>
-&lt;span class="p">}&lt;/span>
-&lt;span class="c1">// case4: 2jumps
-&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="k">if&lt;/span> &lt;span class="nx">jump&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="p">{&lt;/span>
-&lt;span class="nx">ans&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="nf">min&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">ans&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">2&lt;/span>&lt;span class="o">*&lt;/span>&lt;span class="nx">t&lt;/span>&lt;span class="p">)&lt;/span>
-&lt;span class="p">}&lt;/span>
-&lt;span class="c1">// case5: overjump + walk
-&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="nx">ans&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="nf">min&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">ans&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">jump&lt;/span>&lt;span class="o">+&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="o">*&lt;/span>&lt;span class="nx">t&lt;/span>&lt;span class="o">+&lt;/span>&lt;span class="nx">d&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="nx">left&lt;/span>&lt;span class="p">)&lt;/span>
-&lt;span class="nx">fmt&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nf">Println&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">ans&lt;/span>&lt;span class="p">)&lt;/span>
-&lt;span class="k">return&lt;/span>
-&lt;span class="p">}&lt;/span>
-&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div></description></item><item><title>Archives</title><link>https://kadrick.github.io/Blog/archives/</link><pubDate>Sun, 10 Apr 2022 12:49:15 +0900</pubDate><guid>https://kadrick.github.io/Blog/archives/</guid><description/></item><item><title>Search</title><link>https://kadrick.github.io/Blog/search/</link><pubDate>Sun, 10 Apr 2022 12:49:15 +0900</pubDate><guid>https://kadrick.github.io/Blog/search/</guid><description/></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Kadrick's Dev Log</title><link>https://kadrick.github.io/Blog/</link><description>Recent content on Kadrick's Dev Log</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Mon, 11 Apr 2022 00:43:01 +0900</lastBuildDate><atom:link href="https://kadrick.github.io/Blog/index.xml" rel="self" type="application/rss+xml"/><item><title>첫번째 포스트</title><link>https://kadrick.github.io/Blog/p/%EC%B2%AB%EB%B2%88%EC%A7%B8-%ED%8F%AC%EC%8A%A4%ED%8A%B8/</link><pubDate>Mon, 11 Apr 2022 00:43:01 +0900</pubDate><guid>https://kadrick.github.io/Blog/p/%EC%B2%AB%EB%B2%88%EC%A7%B8-%ED%8F%AC%EC%8A%A4%ED%8A%B8/</guid><description>&lt;h3 id="글-못쓰는-사람의-우당탕탕-블로그">글 못쓰는 사람의 우당탕탕 블로그&lt;/h3>
+&lt;p>제목 그대로 나는 글을 못쓴다. 그런데 무슨 블로그냐 싶다.&lt;br>
+&lt;del>이유가 어딨어 그냥 자기만족이지&amp;hellip;&lt;/del>&lt;/p>
+&lt;p>깨놓고 말하면 공부하고자 하는 의지투합 같은 것이다. CS 공부하면서 배우는 것들을 여기다가 정리할 것이다.&lt;br>
+&lt;a class="link" href="http://kadrick.kro.kr/" target="_blank" rel="noopener"
+>원래 Notion을 통해 평소 공부하던 것을 기록&lt;/a>하고 있었다.&lt;br>
+각 Page에 Tag를 달거나 함수등을 이용해서 정리도 쉬웠고 무엇보다도 디자인도 준수했다.&lt;/p>
+&lt;p>그런데 Notion에 적다보니까 너무 난잡해진다.&lt;br>
+블로그 자체는 괜찮은데, 내 일정이나 이런 것들이 주변에 보이니까 심미적으로 좋지 않다.&lt;br>
+그냥 블로그를 하나 완전히 독립시켜버리자 싶어서 알아보다가 괜찮은 테마를 본 것 같아서 적어본다.&lt;br>
+또, commit 도 하나씩 생겨서 (잔디는 항상 안정감을 준다.) 공부하는 느낌을 많이 주기도 했다.&lt;/p>
+&lt;p>핑계가 길었다. 아무튼, 첫 번째 포스트는 블로그의 기능이 잘 되는지 테스트 하는 것이라 주저리 주저리 말이 많다.&lt;br>
+이만 줄이자.&lt;/p></description></item><item><title>Archives</title><link>https://kadrick.github.io/Blog/archives/</link><pubDate>Sun, 10 Apr 2022 12:49:15 +0900</pubDate><guid>https://kadrick.github.io/Blog/archives/</guid><description/></item><item><title>Search</title><link>https://kadrick.github.io/Blog/search/</link><pubDate>Sun, 10 Apr 2022 12:49:15 +0900</pubDate><guid>https://kadrick.github.io/Blog/search/</guid><description/></item></channel></rss>
