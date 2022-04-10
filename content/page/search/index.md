@@ -7,4 +7,5 @@ slug: "search"
 outputs: 
     - html
     - json
+draft: false
 ---
