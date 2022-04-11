@@ -1,5 +1,5 @@
 ---
-title: "GoStudy #1"
+title: "GoStudy#1"
 description: "Golang 첫번째 이야기"
 date: 2022-04-11T09:24:17+09:00
 image: 
