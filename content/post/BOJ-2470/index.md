@@ -17,7 +17,7 @@ tags:
 math: true
 hidden: false
 comments: false
-draft: true
+draft: false
 ---
 ## BOJ 2470 두 용액
 
