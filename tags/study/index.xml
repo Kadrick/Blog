@@ -7,26 +7,28 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
         <lastBuildDate>Mon, 11 Apr 2022 09:24:17 +0900</lastBuildDate><atom:link href="https://kadrick.github.io/Blog/tags/study/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>GoStudy#1</title>
-        <link>https://kadrick.github.io/Blog/p/gostudy#1/</link>
+        <title>GoStudy - 1</title>
+        <link>https://kadrick.github.io/Blog/p/gostudy-1/</link>
         <pubDate>Mon, 11 Apr 2022 09:24:17 +0900</pubDate>
         
-        <guid>https://kadrick.github.io/Blog/p/gostudy#1/</guid>
-        <description>&lt;h2 id=&#34;go&#34;&gt;Go?&lt;/h2&gt;
-&lt;h3 id=&#34;나는-왜-사용하는가&#34;&gt;나는 왜 사용하는가&lt;/h3&gt;
-&lt;p&gt;회사에서 Go 를 쓰게 될 것 같다고 해서 며칠간 Go를 이용해 문제를 풀었었다. 언어에 익숙해지는 것도 문제 풀이만큼 좋은 건 없다고 생각해서&amp;hellip;&lt;/p&gt;
-&lt;p&gt;실제 개발은 아니었지만, 며칠간의 문제 풀이에서 배우고 느낀 것을 정리해보자면&amp;hellip;&lt;/p&gt;
+        <guid>https://kadrick.github.io/Blog/p/gostudy-1/</guid>
+        <description>&lt;hr&gt;
+&lt;h3 id=&#34;golang은-구글에서-만들었다&#34;&gt;Golang은 구글에서 만들었다.&lt;/h3&gt;
+&lt;p&gt;구글에서 처음 발표되었고, 만든 이유는 C++이 싫어서라고 알려진 듯하다.&lt;br&gt;
+컴파일 언어이지만 속도는 빠르고, 정적 타입 검사를 한다. 라이브러리도 풍부하다고 한다. (이건 공부하면 알겠지&amp;hellip;)&lt;br&gt;
+특징으로 GoRoutine이라는 메커니즘을 제공한다. 서버 개발용으로 설계된 언어기에 멀티코어 환경에서 병렬 처리를 쉽게 구현할 수 있다고 한다. 배우기도 쉽다는데&amp;hellip;&lt;/p&gt;
+&lt;h3 id=&#34;나는-어떻게-공부하는가&#34;&gt;나는 어떻게 공부하는가&lt;/h3&gt;
+&lt;p&gt;며칠간 Go를 이용해 문제를 풀었었다. 언어에 익숙해지는 과정에서 문제 풀이만큼 좋은 건 없다고 생각해서이다.&lt;/p&gt;
+&lt;p&gt;실제 개발은 아니었지만, 며칠간의 문제 풀이에서 배우고 느낀 것을 정리해보자면 다음과 같다.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Java와 가깝다.&lt;br&gt;
-문제 풀이하면서 가장 크게 생각한 점이다.
-Java 처럼 패키지를 이용해야 하기도 하지만, C++ 처럼 포인터를 사용할 수 있다.
-사실 그냥 package가 있는 것부터 Java에 가깝다고 생각한다. 자세히는 모르겠다. 아직 실제 개발을 안 해봐서&amp;hellip;&lt;/li&gt;
+문제 풀이하면서 가장 크게 생각한 점이다. PS를 하면서 결국 입출력 패키지나 기본 자료구조 패키지들을 하나씩 알게 될수록 Java랑 다를 게 없다고 느껴졌다. Java with pointer 이런 느낌이 아닐까 싶다. 실제 개발을 하면 어떻게 인식이 바뀔지 모르겠다.&lt;/li&gt;
 &lt;li&gt;STL이 없다. 그런데, map이랑 vector가 공짜?&lt;br&gt;
 처음 하는 처지에서 slice 문법과 Heap package는 나한테 너무 가혹했다. 사실 이건 내가 C++ 로 PS를 했었기 때문에 너무 익숙해져 있던 탓이기도 하다. Golang은 기본적으로 문법 자체에서 map, slice(나한테 아직은 slice는 vector다.) 잘 이용하면 좋겠지만, 얼마 배우지도 않고 사용 한거라 매우 어려웠다. 그래도, 문법에서 map을 지원하는 것은 크게 신기했다.&lt;/li&gt;
 &lt;li&gt;package가 많다.&lt;br&gt;
-사실, 문제를 풀면서 크게 이용할 일은 없다. STL이 없어서 너무 불편했던 나는 package를 찾다가 많은 사람이 Github에 올려놓은 것들을 볼 수 있었고, 사용이 편하다. get을 통해 불러오고 그냥 import 하면 된다.&lt;/li&gt;
+사실, 문제를 풀면서 크게 이용할 일은 없었다. STL이 없어서 너무 불편했던 나는 package를 찾다가 많은 사람이 Github에 올려놓은 것들을 볼 수 있었고, 사용이 편하다. get을 통해 불러오고 그냥 import 하면 된다.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;PS를 통해서 익숙해진 Golang으로 간단하게 개발을 해보려고 한다. 아마 웹 크롤러를 만들 것 같다.&lt;/p&gt;
+&lt;p&gt;조금 익숙해졌다고 조심스레 생각이 들어서 본격적인 공부를 할 것 같다. Golang 및 네트워크 프로그래밍 관련된 책이 있어서 책을 정리하며 Golang을 공부할 것 같다.&lt;/p&gt;
 </description>
         </item>
         
