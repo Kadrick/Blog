@@ -1,8 +1,9 @@
 ---
 title: "GoStudy#1"
+author: "kadrick"
 description: "Golang 첫번째 이야기"
 date: 2022-04-11T09:24:17+09:00
-image: 
+
 categories:
     - "Go Study"
 
@@ -16,9 +17,9 @@ comments: false
 draft: false
 ---
 
-# Go?
+## Go?
 
-## 나는 왜 사용하는가
+### 나는 왜 사용하는가
 회사에서 Go 를 쓰게 될 것 같다고 해서 며칠간 Go를 이용해 문제를 풀었었다. 언어에 익숙해지는 것도 문제 풀이만큼 좋은 건 없다고 생각해서...  
 
 실제 개발은 아니었지만, 며칠간의 문제 풀이에서 배우고 느낀 것을 정리해보자면...
