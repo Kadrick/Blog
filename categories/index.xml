@@ -6,7 +6,15 @@
         <description>Recent content in Categories on Kadrick&#39;s Dev Log</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Mon, 11 Apr 2022 00:43:01 +0900</lastBuildDate><atom:link href="https://kadrick.github.io/Blog/categories/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Mon, 11 Apr 2022 09:24:17 +0900</lastBuildDate><atom:link href="https://kadrick.github.io/Blog/categories/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Go Study</title>
+        <link>https://kadrick.github.io/Blog/categories/go-study/</link>
+        <pubDate>Mon, 11 Apr 2022 09:24:17 +0900</pubDate>
+        
+        <guid>https://kadrick.github.io/Blog/categories/go-study/</guid>
+        <description></description>
+        </item>
+        <item>
         <title>Just Chatting</title>
         <link>https://kadrick.github.io/Blog/categories/just-chatting/</link>
         <pubDate>Mon, 11 Apr 2022 00:43:01 +0900</pubDate>

@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>Posts on Kadrick&#39;s Dev Log</title>
-        <link>https://kadrick.github.io/Blog/post/</link>
-        <description>Recent content in Posts on Kadrick&#39;s Dev Log</description>
+        <title>Go on Kadrick&#39;s Dev Log</title>
+        <link>https://kadrick.github.io/Blog/tags/go/</link>
+        <description>Recent content in Go on Kadrick&#39;s Dev Log</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Mon, 11 Apr 2022 09:24:17 +0900</lastBuildDate><atom:link href="https://kadrick.github.io/Blog/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Mon, 11 Apr 2022 09:24:17 +0900</lastBuildDate><atom:link href="https://kadrick.github.io/Blog/tags/go/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>GoStudy #1</title>
         <link>https://kadrick.github.io/Blog/p/gostudy-#1/</link>
         <pubDate>Mon, 11 Apr 2022 09:24:17 +0900</pubDate>
@@ -27,27 +27,6 @@ Java 처럼 패키지를 이용해야 하기도 하지만, C++ 처럼 포인터�
 사실, 문제를 풀면서 크게 이용할 일은 없다. STL이 없어서 너무 불편했던 나는 package를 찾다가 많은 사람이 Github에 올려놓은 것들을 볼 수 있었고, 사용이 편하다. get을 통해 불러오고 그냥 import 하면 된다.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;PS를 통해서 익숙해진 Golang으로 간단하게 개발을 해보려고 한다. 아마 웹 크롤러를 만들 것 같다.&lt;/p&gt;
-</description>
-        </item>
-        <item>
-        <title>첫번째 포스트</title>
-        <link>https://kadrick.github.io/Blog/p/%EC%B2%AB%EB%B2%88%EC%A7%B8-%ED%8F%AC%EC%8A%A4%ED%8A%B8/</link>
-        <pubDate>Mon, 11 Apr 2022 00:43:01 +0900</pubDate>
-        
-        <guid>https://kadrick.github.io/Blog/p/%EC%B2%AB%EB%B2%88%EC%A7%B8-%ED%8F%AC%EC%8A%A4%ED%8A%B8/</guid>
-        <description>&lt;h3 id=&#34;글-못쓰는-사람의-우당탕탕-블로그&#34;&gt;글 못쓰는 사람의 우당탕탕 블로그&lt;/h3&gt;
-&lt;p&gt;제목 그대로 나는 글을 못쓴다. 그런데 무슨 블로그냐 싶다.&lt;br&gt;
-&lt;del&gt;이유가 어딨어 그냥 자기만족이지&amp;hellip;&lt;/del&gt;&lt;/p&gt;
-&lt;p&gt;깨놓고 말하면 공부하고자 하는 의지투합 같은 것이다. CS 공부하면서 배우는 것들을 여기다가 정리할 것이다.&lt;br&gt;
-&lt;a class=&#34;link&#34; href=&#34;http://kadrick.kro.kr/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;원래 Notion을 통해 평소 공부하던 것을 기록&lt;/a&gt;하고 있었다.&lt;br&gt;
-각 Page에 Tag를 달거나 함수등을 이용해서 정리도 쉬웠고 무엇보다도 디자인도 준수했다.&lt;/p&gt;
-&lt;p&gt;그런데 Notion에 적다보니까 너무 난잡해진다.&lt;br&gt;
-블로그 자체는 괜찮은데, 내 일정이나 이런 것들이 주변에 보이니까 심미적으로 좋지 않다.&lt;br&gt;
-그냥 블로그를 하나 완전히 독립시켜버리자 싶어서 알아보다가 괜찮은 테마를 본 것 같아서 적어본다.&lt;br&gt;
-또, commit 도 하나씩 생겨서 (잔디는 항상 안정감을 준다.) 공부하는 느낌을 많이 주기도 했다.&lt;/p&gt;
-&lt;p&gt;핑계가 길었다. 아무튼, 첫 번째 포스트는 블로그의 기능이 잘 되는지 테스트 하는 것이라 주저리 주저리 말이 많다.&lt;br&gt;
-이만 줄이자.&lt;/p&gt;
 </description>
         </item>
         
