@@ -7,11 +7,11 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
         <lastBuildDate>Mon, 11 Apr 2022 09:24:17 +0900</lastBuildDate><atom:link href="https://kadrick.github.io/Blog/tags/language/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>GoStudy #1</title>
-        <link>https://kadrick.github.io/Blog/p/gostudy-#1/</link>
+        <title>GoStudy#1</title>
+        <link>https://kadrick.github.io/Blog/p/gostudy#1/</link>
         <pubDate>Mon, 11 Apr 2022 09:24:17 +0900</pubDate>
         
-        <guid>https://kadrick.github.io/Blog/p/gostudy-#1/</guid>
+        <guid>https://kadrick.github.io/Blog/p/gostudy#1/</guid>
         <description>&lt;h1 id=&#34;go&#34;&gt;Go?&lt;/h1&gt;
 &lt;h2 id=&#34;나는-왜-사용하는가&#34;&gt;나는 왜 사용하는가&lt;/h2&gt;
 &lt;p&gt;회사에서 Go 를 쓰게 될 것 같다고 해서 며칠간 Go를 이용해 문제를 풀었었다. 언어에 익숙해지는 것도 문제 풀이만큼 좋은 건 없다고 생각해서&amp;hellip;&lt;/p&gt;
