@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="en-us" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='두 용액'><title>BOJ 2470</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='도로포장'><title>BOJ 1162</title>
 
-<link rel='canonical' href='https://kadrick.github.io/Blog/p/boj-2470/'>
+<link rel='canonical' href='https://kadrick.github.io/Blog/p/boj-1162/'>
 
-<link rel="stylesheet" href="/Blog/scss/style.min.5803a057c2bf108de9a3680331bf905cd2abd24f8e24924837ba04bbbefabddf.css"><meta property='og:title' content='BOJ 2470'>
-<meta property='og:description' content='두 용액'>
-<meta property='og:url' content='https://kadrick.github.io/Blog/p/boj-2470/'>
+<link rel="stylesheet" href="/Blog/scss/style.min.5803a057c2bf108de9a3680331bf905cd2abd24f8e24924837ba04bbbefabddf.css"><meta property='og:title' content='BOJ 1162'>
+<meta property='og:description' content='도로포장'>
+<meta property='og:url' content='https://kadrick.github.io/Blog/p/boj-1162/'>
 <meta property='og:site_name' content='Kadrick&#39;s Dev Log'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Study' /><meta property='article:tag' content='Algorithm' /><meta property='article:tag' content='two pointers' /><meta property='article:published_time' content='2022-04-11T21:06:22&#43;09:00'/><meta property='article:modified_time' content='2022-04-11T21:06:22&#43;09:00'/><meta property='og:image' content='https://kadrick.github.io/Blog/p/boj-2470/boj-banner.png' />
-<meta name="twitter:title" content="BOJ 2470">
-<meta name="twitter:description" content="두 용액"><meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content='https://kadrick.github.io/Blog/p/boj-2470/boj-banner.png' />
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Study' /><meta property='article:tag' content='Algorithm' /><meta property='article:tag' content='dijkstra' /><meta property='article:published_time' content='2022-04-13T13:28:41&#43;09:00'/><meta property='article:modified_time' content='2022-04-13T13:28:41&#43;09:00'/><meta property='og:image' content='https://kadrick.github.io/Blog/p/boj-1162/boj-banner.png' />
+<meta name="twitter:title" content="BOJ 1162">
+<meta name="twitter:description" content="도로포장"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://kadrick.github.io/Blog/p/boj-1162/boj-banner.png' />
     </head>
     <body class="
     article-page
@@ -210,13 +210,13 @@
     <article class="has-image main-article">
     <header class="article-header">
         <div class="article-image">
-            <a href="/Blog/p/boj-2470/">
-                <img src="/Blog/p/boj-2470/boj-banner_hua8dbec156adc816fe5043c41cdb6daaf_110403_800x0_resize_box_2.png"
-                        srcset="/Blog/p/boj-2470/boj-banner_hua8dbec156adc816fe5043c41cdb6daaf_110403_800x0_resize_box_2.png 800w, /Blog/p/boj-2470/boj-banner_hua8dbec156adc816fe5043c41cdb6daaf_110403_1600x0_resize_box_2.png 1600w"
+            <a href="/Blog/p/boj-1162/">
+                <img src="/Blog/p/boj-1162/boj-banner_hua8dbec156adc816fe5043c41cdb6daaf_110403_800x0_resize_box_2.png"
+                        srcset="/Blog/p/boj-1162/boj-banner_hua8dbec156adc816fe5043c41cdb6daaf_110403_800x0_resize_box_2.png 800w, /Blog/p/boj-1162/boj-banner_hua8dbec156adc816fe5043c41cdb6daaf_110403_1600x0_resize_box_2.png 1600w"
                         width="800" 
                         height="187" 
                         loading="lazy"
-                        alt="Featured image of post BOJ 2470" />
+                        alt="Featured image of post BOJ 1162" />
                 
             </a>
         </div>
@@ -235,12 +235,12 @@
 
     <div class="article-title-wrapper">
         <h2 class="article-title">
-            <a href="/Blog/p/boj-2470/">BOJ 2470</a>
+            <a href="/Blog/p/boj-1162/">BOJ 1162</a>
         </h2>
     
         
         <h3 class="article-subtitle">
-            두 용액
+            도로포장
         </h3>
         
     </div>
@@ -258,7 +258,7 @@
   <path d="M3 11h16" />
   <path d="M18 16.496v1.504l1 1" />
 </svg>
-                <time class="article-time--published">Apr 11, 2022</time>
+                <time class="article-time--published">Apr 13, 2022</time>
             </div>
         
 
@@ -287,27 +287,29 @@
     <section class="article-content">
     
     
-    <h2 id="boj-2470-두-용액">BOJ 2470 두 용액</h2>
-<p><a class="link" href="https://boj.kr/2470"  target="_blank" rel="noopener"
+    <h2 id="boj-1162-도로포장">BOJ 1162 도로포장</h2>
+<p><a class="link" href="https://boj.kr/1162"  target="_blank" rel="noopener"
     >link</a></p>
 <h3 id="문제">문제</h3>
-<p>요약하면 주어진 배열에서 두 수를 더했을 때 0에 가장 가까운 두 수를 구하는 것이다.</p>
+<p>k개의 간선을 무시하고 넘어갈 수 있을 때 도착지까지의 최소비용을 구하는 문제</p>
 <h3 id="풀이">풀이</h3>
-<p>Two pointers 알고리즘을 알고 있다면, 쉽게 풀 수 있다.</p>
-<p>풀이는 다음과 같다.</p>
-<p>left가 배열의 처음 / right가 배열의 마지막을 가르치고 있다.</p>
-<ol>
-<li>우선 들어온 용액을 오름차순 정렬한다.</li>
-<li>left가 가리키는 수와 right가 가리키는 수를 더한다.<br>
-2-1. 더한 결과가 현재 0과 가까운 수보다 더 0에 가까우면 업데이트한다. 결과가 0이라면 그대로 종료해도 된다.<br>
-2-2. 더한 결과가 0보다 작다면 left를 +1 해준다. 이후 다시 2번부터 진행한다.
-2-3. 더한 결과가 0보다 크다면 right를 -1 해준다. 이후 다시 2번부터 진행한다.</li>
-</ol>
-<p>반복하다가 left &lt; right 를 만족하지 못하면 종료한다.</p>
-<p>두 수의 합에 따라 용액을 더 넣거나 빼는 것으로 생각하면 쉽다.</p>
+<p><a class="link" href="https://www.acmicpc.net/problem/10217"  target="_blank" rel="noopener"
+    >BOJ-10217</a> 과 비슷하게 문제를 풀었다.
+10217번은 비용이라는 요소가 추가되었고 이번 문제에서는 비용을 0으로 만드는 횟수가 주어진 것이다.</p>
+<p>결국 출발지점(1번노드)에서 도착지점(N번 노드)까지의 최단거리를 구하는 것과 같다. 도로의 이동시간은 자연수라고 하였으니 다익스트라를 써도 된다.
+그렇기에 다익스트라를 통해 구하자. 그런데 그냥 다익스트라를 사용하기에는 비용이 0인 간선의 처리가 부족하다. 어떤 간선의 비용을 0으로 만들면 될까?</p>
+<p>어차피 모르니까 전부 다 계산해보자. 왜? k가 20 이하의 자연수다. 기회가 그렇게 많지 않다고 생각된다.
+그럼 어떤 간선을 지날 때 기회를 사용해야 하지? 라는 생각이 들 수 있는데 이 문제는 기회를 어디서 쓰는지 묻고 있지 않다. 어쨌든 최소비용을 구하는 문제다.
+어디에보다는 몇 번 사용했는지 기록해서 다음과 같이 dist 배열을 만들자.</p>
+<blockquote>
+<p><em><strong>dist[i][j] = 기회를 j번 사용하여 i번에 도달하였을 때 최소비용</strong></em></p>
+</blockquote>
+<p>이러면 결국 정답은 dist[n][0] ~ dist[n][k] 사이의 최솟값이 된다.</p>
+<p>다익스트라 과정 중에 새로운 정점을 큐에 넣을 때, (정점까지의 비용, 정점, 기회 소진 횟수)를 같이 넣어서 구현하면 된다.</p>
+<p>주의할 점은 입력이 양방향 도로이고, 과정 중 int범위를 넘을 수 있다.</p>
 <h3 id="소스코드">소스코드</h3>
 <blockquote>
-<p><a class="link" href="https://github.com/Kadrick/PS/blob/main/BOJ/2470.cpp"  target="_blank" rel="noopener"
+<p><a class="link" href="https://github.com/Kadrick/PS/blob/main/BOJ/1162.cpp"  target="_blank" rel="noopener"
     >C++</a></p>
 </blockquote>
 <div class="highlight"><div class="chroma">
@@ -370,14 +372,34 @@
 </span><span class="lnt">56
 </span><span class="lnt">57
 </span><span class="lnt">58
+</span><span class="lnt">59
+</span><span class="lnt">60
+</span><span class="lnt">61
+</span><span class="lnt">62
+</span><span class="lnt">63
+</span><span class="lnt">64
+</span><span class="lnt">65
+</span><span class="lnt">66
+</span><span class="lnt">67
+</span><span class="lnt">68
+</span><span class="lnt">69
+</span><span class="lnt">70
+</span><span class="lnt">71
+</span><span class="lnt">72
+</span><span class="lnt">73
+</span><span class="lnt">74
+</span><span class="lnt">75
+</span><span class="lnt">76
+</span><span class="lnt">77
+</span><span class="lnt">78
 </span></code></pre></td>
 <td class="lntd">
 <pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="cm">/**
-</span><span class="cm"> * @file 2470.cpp
+</span><span class="cm"> * @file 1162.cpp
 </span><span class="cm"> * @author Kadrick (kbk2581553@gmail.com)
-</span><span class="cm"> * @brief two pointers
+</span><span class="cm"> * @brief dijkstra
 </span><span class="cm"> * @version 0.1
-</span><span class="cm"> * @date 2022-04-11 20:53
+</span><span class="cm"> * @date 2022-04-13 12:54
 </span><span class="cm"> *
 </span><span class="cm"> * @copyright Copyright (c) 2022
 </span><span class="cm"> *
@@ -389,44 +411,64 @@
 </span><span class="cp">  cin.tie(0);
 </span><span class="cp">#define endl &#39;\n&#39;
 </span><span class="cp"></span>
-<span class="kt">void</span> <span class="nf">solve</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">,</span> <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="o">&amp;</span><span class="n">water</span><span class="p">)</span>
-<span class="p">{</span>
-  <span class="n">pair</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span> <span class="kt">int</span><span class="o">&gt;</span> <span class="n">ans</span><span class="p">;</span>
-  <span class="kt">int</span> <span class="n">left</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">right</span> <span class="o">=</span> <span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span>
-  <span class="n">ans</span><span class="p">.</span><span class="n">first</span> <span class="o">=</span> <span class="n">ans</span><span class="p">.</span><span class="n">second</span> <span class="o">=</span> <span class="mf">1e9</span><span class="p">;</span>
-  <span class="k">while</span> <span class="p">(</span><span class="n">left</span> <span class="o">&lt;</span> <span class="n">right</span><span class="p">)</span>
-  <span class="p">{</span>
-    <span class="k">if</span> <span class="p">(</span><span class="n">abs</span><span class="p">(</span><span class="n">water</span><span class="p">[</span><span class="n">left</span><span class="p">]</span> <span class="o">+</span> <span class="n">water</span><span class="p">[</span><span class="n">right</span><span class="p">])</span> <span class="o">&lt;=</span> <span class="n">abs</span><span class="p">(</span><span class="n">ans</span><span class="p">.</span><span class="n">first</span> <span class="o">+</span> <span class="n">ans</span><span class="p">.</span><span class="n">second</span><span class="p">))</span>
-    <span class="p">{</span>
-      <span class="n">ans</span><span class="p">.</span><span class="n">first</span> <span class="o">=</span> <span class="n">water</span><span class="p">[</span><span class="n">left</span><span class="p">];</span>
-      <span class="n">ans</span><span class="p">.</span><span class="n">second</span> <span class="o">=</span> <span class="n">water</span><span class="p">[</span><span class="n">right</span><span class="p">];</span>
+<span class="cp">#define int long long
+</span><span class="cp"></span><span class="k">const</span> <span class="kt">int</span> <span class="n">INF</span> <span class="o">=</span> <span class="n">LLONG_MAX</span><span class="p">;</span>
 
-      <span class="k">if</span> <span class="p">(</span><span class="n">ans</span><span class="p">.</span><span class="n">first</span> <span class="o">+</span> <span class="n">ans</span><span class="p">.</span><span class="n">second</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>
-        <span class="k">break</span><span class="p">;</span>
-    <span class="p">}</span>
+<span class="kt">int</span> <span class="n">n</span><span class="p">,</span> <span class="n">m</span><span class="p">,</span> <span class="n">k</span><span class="p">,</span> <span class="n">ans</span> <span class="o">=</span> <span class="n">INF</span><span class="p">;</span>
+<span class="n">vector</span><span class="o">&lt;</span><span class="n">pair</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span> <span class="kt">int</span><span class="o">&gt;&gt;</span> <span class="n">graph</span><span class="p">[</span><span class="mi">10001</span><span class="p">];</span>
+<span class="n">vector</span><span class="o">&lt;</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&gt;</span> <span class="n">dist</span><span class="p">(</span><span class="mi">10001</span><span class="p">,</span> <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">(</span><span class="mi">21</span><span class="p">,</span> <span class="n">INF</span><span class="p">));</span>
 
-    <span class="k">if</span> <span class="p">(</span><span class="n">water</span><span class="p">[</span><span class="n">left</span><span class="p">]</span> <span class="o">+</span> <span class="n">water</span><span class="p">[</span><span class="n">right</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span>
-      <span class="n">left</span><span class="o">++</span><span class="p">;</span>
-    <span class="k">else</span>
-      <span class="n">right</span><span class="o">--</span><span class="p">;</span>
-  <span class="p">}</span>
-
-  <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">ans</span><span class="p">.</span><span class="n">first</span> <span class="o">&lt;&lt;</span> <span class="sc">&#39; &#39;</span> <span class="o">&lt;&lt;</span> <span class="n">ans</span><span class="p">.</span><span class="n">second</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
-<span class="p">}</span>
-
-<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="kt">int32_t</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
 <span class="p">{</span>
   <span class="n">fastio</span><span class="p">;</span>
 
-  <span class="kt">int</span> <span class="n">n</span><span class="p">;</span>
-  <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">water</span><span class="p">;</span>
-  <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">n</span><span class="p">;</span>
-  <span class="n">water</span><span class="p">.</span><span class="n">resize</span><span class="p">(</span><span class="n">n</span><span class="p">);</span>
-  <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
-    <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">water</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+  <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">n</span> <span class="o">&gt;&gt;</span> <span class="n">m</span> <span class="o">&gt;&gt;</span> <span class="n">k</span><span class="p">;</span>
 
-  <span class="n">sort</span><span class="p">(</span><span class="n">water</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span> <span class="n">water</span><span class="p">.</span><span class="n">end</span><span class="p">());</span>
-  <span class="n">solve</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">water</span><span class="p">);</span>
+  <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">m</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+  <span class="p">{</span>
+    <span class="kt">int</span> <span class="n">u</span><span class="p">,</span> <span class="n">v</span><span class="p">,</span> <span class="n">c</span><span class="p">;</span>
+    <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">u</span> <span class="o">&gt;&gt;</span> <span class="n">v</span> <span class="o">&gt;&gt;</span> <span class="n">c</span><span class="p">;</span>
+    <span class="n">graph</span><span class="p">[</span><span class="n">u</span><span class="p">].</span><span class="n">push_back</span><span class="p">({</span><span class="n">v</span><span class="p">,</span> <span class="n">c</span><span class="p">});</span>
+    <span class="n">graph</span><span class="p">[</span><span class="n">v</span><span class="p">].</span><span class="n">push_back</span><span class="p">({</span><span class="n">u</span><span class="p">,</span> <span class="n">c</span><span class="p">});</span>
+  <span class="p">}</span>
+
+  <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">21</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+    <span class="n">dist</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="nb">true</span><span class="p">;</span>
+  
+  <span class="n">priority_queue</span><span class="o">&lt;</span><span class="n">pair</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span> <span class="n">pair</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span> <span class="kt">int</span><span class="o">&gt;&gt;&gt;</span> <span class="n">pq</span><span class="p">;</span>
+  <span class="n">pq</span><span class="p">.</span><span class="n">push</span><span class="p">({</span><span class="mi">0</span><span class="p">,</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">}});</span>
+
+  <span class="k">while</span> <span class="p">(</span><span class="n">pq</span><span class="p">.</span><span class="n">size</span><span class="p">())</span>
+  <span class="p">{</span>
+    <span class="kt">int</span> <span class="n">cost</span> <span class="o">=</span> <span class="o">-</span><span class="n">pq</span><span class="p">.</span><span class="n">top</span><span class="p">().</span><span class="n">first</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">here</span> <span class="o">=</span> <span class="n">pq</span><span class="p">.</span><span class="n">top</span><span class="p">().</span><span class="n">second</span><span class="p">.</span><span class="n">first</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">fix</span> <span class="o">=</span> <span class="n">pq</span><span class="p">.</span><span class="n">top</span><span class="p">().</span><span class="n">second</span><span class="p">.</span><span class="n">second</span><span class="p">;</span>
+    <span class="n">pq</span><span class="p">.</span><span class="n">pop</span><span class="p">();</span>
+
+    <span class="k">if</span> <span class="p">(</span><span class="n">dist</span><span class="p">[</span><span class="n">here</span><span class="p">][</span><span class="n">fix</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">cost</span> <span class="o">||</span> <span class="n">here</span> <span class="o">==</span> <span class="n">n</span><span class="p">)</span>
+      <span class="k">continue</span><span class="p">;</span>
+
+    <span class="k">for</span> <span class="p">(</span><span class="k">auto</span> <span class="o">&amp;&amp;</span><span class="nl">there</span> <span class="p">:</span> <span class="n">graph</span><span class="p">[</span><span class="n">here</span><span class="p">])</span>
+    <span class="p">{</span>
+      <span class="c1">// fix
+</span><span class="c1"></span>      <span class="k">if</span> <span class="p">(</span><span class="n">fix</span> <span class="o">&lt;</span> <span class="n">k</span> <span class="o">&amp;&amp;</span> <span class="n">dist</span><span class="p">[</span><span class="n">there</span><span class="p">.</span><span class="n">first</span><span class="p">][</span><span class="n">fix</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">cost</span><span class="p">)</span>
+      <span class="p">{</span>
+        <span class="n">dist</span><span class="p">[</span><span class="n">there</span><span class="p">.</span><span class="n">first</span><span class="p">][</span><span class="n">fix</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">cost</span><span class="p">;</span>
+        <span class="n">pq</span><span class="p">.</span><span class="n">push</span><span class="p">({</span><span class="o">-</span><span class="n">cost</span><span class="p">,</span> <span class="p">{</span><span class="n">there</span><span class="p">.</span><span class="n">first</span><span class="p">,</span> <span class="n">fix</span> <span class="o">+</span> <span class="mi">1</span><span class="p">}});</span>
+      <span class="p">}</span>
+      <span class="c1">// no fix
+</span><span class="c1"></span>      <span class="k">if</span> <span class="p">(</span><span class="n">dist</span><span class="p">[</span><span class="n">there</span><span class="p">.</span><span class="n">first</span><span class="p">][</span><span class="n">fix</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">cost</span> <span class="o">+</span> <span class="n">there</span><span class="p">.</span><span class="n">second</span><span class="p">)</span>
+      <span class="p">{</span>
+        <span class="n">dist</span><span class="p">[</span><span class="n">there</span><span class="p">.</span><span class="n">first</span><span class="p">][</span><span class="n">fix</span><span class="p">]</span> <span class="o">=</span> <span class="n">cost</span> <span class="o">+</span> <span class="n">there</span><span class="p">.</span><span class="n">second</span><span class="p">;</span>
+        <span class="n">pq</span><span class="p">.</span><span class="n">push</span><span class="p">({</span><span class="o">-</span><span class="p">(</span><span class="n">cost</span> <span class="o">+</span> <span class="n">there</span><span class="p">.</span><span class="n">second</span><span class="p">),</span> <span class="p">{</span><span class="n">there</span><span class="p">.</span><span class="n">first</span><span class="p">,</span> <span class="n">fix</span><span class="p">}});</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+
+  <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">21</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+    <span class="n">ans</span> <span class="o">=</span> <span class="n">min</span><span class="p">(</span><span class="n">ans</span><span class="p">,</span> <span class="n">dist</span><span class="p">[</span><span class="n">n</span><span class="p">][</span><span class="n">i</span><span class="p">]);</span>
+
+  <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">ans</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
 
   <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>
@@ -444,7 +486,7 @@
         
             <a href="/Blog/tags/algorithm/">Algorithm</a>
         
-            <a href="/Blog/tags/two-pointers/">two pointers</a>
+            <a href="/Blog/tags/dijkstra/">dijkstra</a>
         
     </section>
 
@@ -501,29 +543,6 @@
             
                 
 <article class="has-image">
-    <a href="/Blog/p/boj-1162/">
-        
-        
-            <div class="article-image">
-                <img src="/Blog/p/boj-1162/boj-banner.f4d67c2892eea39ed79a4f0123b98081_hua8dbec156adc816fe5043c41cdb6daaf_110403_250x150_fill_box_smart1_2.png" 
-                        width="250" 
-                        height="150" 
-                        loading="lazy"
-                        alt="Featured image of post BOJ 1162"
-                        
-                        data-hash="md5-9NZ8KJLuo57Xmk8BI7mAgQ==">
-                
-            </div>
-        
-
-        <div class="article-details">
-            <h2 class="article-title">BOJ 1162</h2>
-        </div>
-    </a>
-</article>
-            
-                
-<article class="has-image">
     <a href="/Blog/p/boj-21924/">
         
         
@@ -541,6 +560,29 @@
 
         <div class="article-details">
             <h2 class="article-title">BOJ 21924</h2>
+        </div>
+    </a>
+</article>
+            
+                
+<article class="has-image">
+    <a href="/Blog/p/boj-2470/">
+        
+        
+            <div class="article-image">
+                <img src="/Blog/p/boj-2470/boj-banner.f4d67c2892eea39ed79a4f0123b98081_hua8dbec156adc816fe5043c41cdb6daaf_110403_250x150_fill_box_smart1_2.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post BOJ 2470"
+                        
+                        data-hash="md5-9NZ8KJLuo57Xmk8BI7mAgQ==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">BOJ 2470</h2>
         </div>
     </a>
 </article>
@@ -667,7 +709,7 @@
         <div class="widget--toc">
             <nav id="TableOfContents">
   <ol>
-    <li><a href="#boj-2470-두-용액">BOJ 2470 두 용액</a>
+    <li><a href="#boj-1162-도로포장">BOJ 1162 도로포장</a>
       <ol>
         <li><a href="#문제">문제</a></li>
         <li><a href="#풀이">풀이</a></li>
