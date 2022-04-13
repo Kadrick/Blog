@@ -1,0 +1,908 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='Syntax - 1'><title>GoStudy - 2</title>
+
+<link rel='canonical' href='https://kadrick.github.io/Blog/p/gostudy-2/'>
+
+<link rel="stylesheet" href="/Blog/scss/style.min.5803a057c2bf108de9a3680331bf905cd2abd24f8e24924837ba04bbbefabddf.css"><meta property='og:title' content='GoStudy - 2'>
+<meta property='og:description' content='Syntax - 1'>
+<meta property='og:url' content='https://kadrick.github.io/Blog/p/gostudy-2/'>
+<meta property='og:site_name' content='Kadrick&#39;s Dev Log'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Study' /><meta property='article:tag' content='Language' /><meta property='article:tag' content='Go' /><meta property='article:tag' content='Syntax' /><meta property='article:published_time' content='2022-04-13T09:10:49&#43;09:00'/><meta property='article:modified_time' content='2022-04-13T09:10:49&#43;09:00'/>
+<meta name="twitter:title" content="GoStudy - 2">
+<meta name="twitter:description" content="Syntax - 1">
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "dark");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="메뉴 여닫기">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/Blog/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/Blog/img/avatar_huf3e712f7030cb1d1f6bdcb05366a35b1_3079532_300x0_resize_box_2.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+                    <span class="emoji">🍥</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/Blog">Kadrick&#39;s Dev Log</a></h1>
+            <h2 class="site-description">No pain, no gain</h2>
+        </div>
+    </header><ol class="social-menu">
+            
+                <li>
+                    <a 
+                        href='https://github.com/Kadrick'
+                        target="_blank"
+                        title="GitHub"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+
+        <li >
+            <a href='/Blog/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>Home</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/Blog/archives' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>Archives</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/Blog/search' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>Search</span>
+            </a>
+        </li>
+        
+
+        <div class="menu-bottom-section">
+                <li id="i18n-switch">  
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-language" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M4 5h7" />
+  <path d="M9 3v2c0 4.418 -2.239 8 -5 8" />
+  <path d="M5 9c-.003 2.144 2.952 3.908 6.7 4" />
+  <path d="M12 20l4 -9l4 9" />
+  <path d="M19.1 18h-6.2" />
+</svg>
+
+
+
+                    <select name="language" onchange="window.location.href = this.selectedOptions[0].value">
+                        
+                            <option value="https://kadrick.github.io/Blog/" selected>Korean</option>
+                        
+                            <option value="https://kadrick.github.io/Blog/en/" >English</option>
+                        
+                    </select>
+                </li>
+            
+            
+            
+                <li id="dark-mode-toggle">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <span>다크 모드</span>
+                </li>
+            
+        </div>
+    </ol>
+</aside>
+<main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/Blog/categories/go-study/" >
+                Go Study
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/Blog/p/gostudy-2/">GoStudy - 2</a>
+        </h2>
+    
+        
+        <h3 class="article-subtitle">
+            Syntax - 1
+        </h3>
+        
+    </div>
+
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Apr 13, 2022</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    4 분 정도
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+</header>
+
+    <section class="article-content">
+    
+    
+    <h2 id="go-study---syntax---1">Go study - syntax - 1</h2>
+<h3 id="hello-world">Hello world!</h3>
+<p>다음은 Hello, world! 이다.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-go" data-lang="go"><span class="c1">// main.go
+</span><span class="c1"></span><span class="kn">package</span> <span class="nx">main</span>
+
+<span class="kn">import</span> <span class="s">&#34;fmt&#34;</span>
+
+<span class="kd">func</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+	<span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="s">&#34;Hello, world&#34;</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>main package가 있고, &ldquo;<a class="link" href="https://pkg.go.dev/fmt"  target="_blank" rel="noopener"
+    >fmt</a>&rdquo; 라는 것을 import 하고, 그곳에 있는 println이라는 method를 이용한다. 자바와 상당이 유사하다고 생각된다. import하는 package는 어떤 게 있을까?</p>
+<blockquote>
+<p><a class="link" href="https://cs.opensource.google/go/go/&#43;/master:"  target="_blank" rel="noopener"
+    >Google Go Page</a></p>
+</blockquote>
+<p>첫 번째로 위의 사이트의 src directory 밑에 있는 package는 모두 사용 가능 하다. bufio, math, sort 같은 것들을 확인할 수 있다.</p>
+<p><img src="/Blog/p/gostudy-2/GoBasicPkg.png"
+	width="952"
+	height="552"
+	srcset="/Blog/p/gostudy-2/GoBasicPkg_hu7a683a990f71c1522761879d0e563a94_75778_480x0_resize_box_2.png 480w, /Blog/p/gostudy-2/GoBasicPkg_hu7a683a990f71c1522761879d0e563a94_75778_1024x0_resize_box_2.png 1024w"
+	loading="lazy"
+	
+		alt="Go Basic Image"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="172"
+		data-flex-basis="413px"
+	
+></p>
+<p>두 번째로 Github 같은 곳에서 package를 가져올 수 있다.</p>
+<p><a class="link" href="https://pkg.go.dev/github.com/labstack/echo/v4"  target="_blank" rel="noopener"
+    >echo</a> 라는 package를 사용하는 예제이다.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-go" data-lang="go"><span class="kn">package</span> <span class="nx">main</span>
+
+<span class="kn">import</span> <span class="p">(</span>
+  <span class="s">&#34;github.com/labstack/echo/v4&#34;</span>
+  <span class="s">&#34;github.com/labstack/echo/v4/middleware&#34;</span>
+  <span class="s">&#34;net/http&#34;</span>
+<span class="p">)</span>
+
+<span class="kd">func</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+  <span class="c1">// Echo instance
+</span><span class="c1"></span>  <span class="nx">e</span> <span class="o">:=</span> <span class="nx">echo</span><span class="p">.</span><span class="nf">New</span><span class="p">()</span>
+
+  <span class="c1">// Middleware
+</span><span class="c1"></span>  <span class="nx">e</span><span class="p">.</span><span class="nf">Use</span><span class="p">(</span><span class="nx">middleware</span><span class="p">.</span><span class="nf">Logger</span><span class="p">())</span>
+  <span class="nx">e</span><span class="p">.</span><span class="nf">Use</span><span class="p">(</span><span class="nx">middleware</span><span class="p">.</span><span class="nf">Recover</span><span class="p">())</span>
+
+  <span class="c1">// Routes
+</span><span class="c1"></span>  <span class="nx">e</span><span class="p">.</span><span class="nf">GET</span><span class="p">(</span><span class="s">&#34;/&#34;</span><span class="p">,</span> <span class="nx">hello</span><span class="p">)</span>
+
+  <span class="c1">// Start server
+</span><span class="c1"></span>  <span class="nx">e</span><span class="p">.</span><span class="nx">Logger</span><span class="p">.</span><span class="nf">Fatal</span><span class="p">(</span><span class="nx">e</span><span class="p">.</span><span class="nf">Start</span><span class="p">(</span><span class="s">&#34;:1323&#34;</span><span class="p">))</span>
+<span class="p">}</span>
+
+<span class="c1">// Handler
+</span><span class="c1"></span><span class="kd">func</span> <span class="nf">hello</span><span class="p">(</span><span class="nx">c</span> <span class="nx">echo</span><span class="p">.</span><span class="nx">Context</span><span class="p">)</span> <span class="kt">error</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="nx">c</span><span class="p">.</span><span class="nf">String</span><span class="p">(</span><span class="nx">http</span><span class="p">.</span><span class="nx">StatusOK</span><span class="p">,</span> <span class="s">&#34;Hello, World!&#34;</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>doc의 설명을 읽어보면 install을 하고 다음과 같이 import에 명시해주기만 하면 된다.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-sh" data-lang="sh">// go get github.com/labstack/echo/<span class="o">{</span>version<span class="o">}</span>
+go get github.com/labstack/echo/v4
+</code></pre></td></tr></table>
+</div>
+</div><p>Go의 버전이 높다면 get 커맨드로 install이 되지 않는다. <strong>install</strong>을 이용하여야 한다.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-sh" data-lang="sh">go install github.com/labstack/echo/v4@latest
+</code></pre></td></tr></table>
+</div>
+</div><p>이런 식으로 사용하면 된다.</p>
+<hr>
+<p>다시 Hello, world!로 돌아가면 ;(세미콜론)도 없는 것을 확인할 수 있다. 컴파일 시에 문장 끝에 자동으로 ;을 삽입한다. 명시해도 상관없는 것으로 알고 있는데, vscode 설치 후 저장 시에 어차피 붙어있는 ;도 없애기에 앞으로는 ;없이 코드를 작성할 것 같다.</p>
+<hr>
+<p>주석은 C 처럼 /* */ 사이에 작성해도 되고, //을 사용해도 된다.</p>
+<hr>
+<p>Go 에서는 {}(중괄호)의 위치를 따진다. 함수 선언, 제어문 뒤에 오는 여는 중괄호는 반드시 줄 바꿈을 하지 않고 바로 뒤에 작성해야 한다. 말로 하면 어렵다. 예시를 보면 바로 이해할 수 있다.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-go" data-lang="go"><span class="c1">// main.go
+</span><span class="c1"></span><span class="kn">package</span> <span class="nx">main</span>
+
+<span class="kn">import</span> <span class="s">&#34;fmt&#34;</span>
+<span class="cm">/*
+</span><span class="cm">// 이런 형식이 불가능하다.
+</span><span class="cm">func main() 
+</span><span class="cm">{
+</span><span class="cm">	fmt.Println(&#34;Hello, world&#34;)
+</span><span class="cm">}
+</span><span class="cm">*/</span>
+
+<span class="kd">func</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+	<span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="s">&#34;Hello, world&#34;</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><hr>
+<h3 id="variables-변수">Variables, 변수</h3>
+<p>Go 에서의 변수의 사용과 자료형에 대해서 알아보자.</p>
+<h4 id="declaration-변수를-사용해보자">Declaration, 변수를 사용해보자.</h4>
+<p>기본적인 변수 선언은 키워드 <strong>var, const</strong> 을 통해서 진행한다. &ldquo;&lt;var | const&gt; &lt;변수 이름&gt; &lt;자료형&gt;&rdquo; 형식으로 사용한다. var은 일반적인 변수, cosnt는 상수를 의미한다.</p>
+<p>선언과 정의를 동시에 하기 위해서 &ldquo;:=&rdquo; 을 사용할 수 있는데 전역으로 사용은 불가능하다.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-go" data-lang="go"><span class="kn">package</span> <span class="nx">main</span>
+
+<span class="kn">import</span> <span class="s">&#34;fmt&#34;</span>
+
+<span class="kd">const</span> <span class="nx">num3</span> <span class="kt">int</span> <span class="p">=</span> <span class="mi">4</span>
+
+<span class="kd">func</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="c1">// 변수 선언시 초기화 하지 않으면 자동으로 자료형에 맞는 기본값으로 초기화
+</span><span class="c1"></span>    <span class="c1">// int: 0, bool: flase 로 초기화 된다. string은 빈문자열 이런 식으로...
+</span><span class="c1"></span>	<span class="kd">var</span> <span class="nx">num1</span> <span class="kt">int</span>
+	<span class="kd">var</span> <span class="nx">num2</span> <span class="kt">int</span> <span class="p">=</span> <span class="mi">1</span>
+	<span class="nx">num1</span> <span class="p">=</span> <span class="mi">2</span>
+
+	<span class="nx">fmt</span><span class="p">.</span><span class="nf">Printf</span><span class="p">(</span><span class="s">&#34;%d %d&#34;</span><span class="p">,</span> <span class="nx">num1</span><span class="o">+</span><span class="nx">num2</span><span class="p">,</span> <span class="nx">num3</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><p><img src="/Blog/p/gostudy-2/ret_1.png"
+	width="365"
+	height="28"
+	srcset="/Blog/p/gostudy-2/ret_1_huef0e200659190900929b4d7efb4fe252_5214_480x0_resize_box_2.png 480w, /Blog/p/gostudy-2/ret_1_huef0e200659190900929b4d7efb4fe252_5214_1024x0_resize_box_2.png 1024w"
+	loading="lazy"
+	
+		alt="실행결과"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="1303"
+		data-flex-basis="3128px"
+	
+></p>
+<h4 id="data-type-변수의-그릇">Data Type, 변수의 그릇</h4>
+<p>Go의 자료형은 <a class="link" href="https://go.dev/ref/spec#Types"  target="_blank" rel="noopener"
+    >document</a>를 확인하면 알 수 있다. 영어라서 어질어질하지만 요약하면 아래의 표가 된다.</p>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th style="text-align:center">type</th>
+<th style="text-align:center">description</th>
+<th style="text-align:center">byte</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">bool</td>
+<td style="text-align:center">true, false</td>
+<td style="text-align:center">1</td>
+</tr>
+<tr>
+<td style="text-align:center">uint8</td>
+<td style="text-align:center">음수를 제외한 1byte 정수</td>
+<td style="text-align:center">1</td>
+</tr>
+<tr>
+<td style="text-align:center">uint16</td>
+<td style="text-align:center">음수를 제외한 2byte 정수</td>
+<td style="text-align:center">2</td>
+</tr>
+<tr>
+<td style="text-align:center">uint32</td>
+<td style="text-align:center">음수를 제외한 4byte 정수</td>
+<td style="text-align:center">4</td>
+</tr>
+<tr>
+<td style="text-align:center">uint64</td>
+<td style="text-align:center">음수를 제외한 8byte 정수</td>
+<td style="text-align:center">8</td>
+</tr>
+<tr>
+<td style="text-align:center">int8</td>
+<td style="text-align:center">1byte 정수</td>
+<td style="text-align:center">1</td>
+</tr>
+<tr>
+<td style="text-align:center">int16</td>
+<td style="text-align:center">2byte 정수</td>
+<td style="text-align:center">2</td>
+</tr>
+<tr>
+<td style="text-align:center">int32</td>
+<td style="text-align:center">4byte 정수</td>
+<td style="text-align:center">4</td>
+</tr>
+<tr>
+<td style="text-align:center">int64</td>
+<td style="text-align:center">8byte 정수</td>
+<td style="text-align:center">8</td>
+</tr>
+<tr>
+<td style="text-align:center">float32</td>
+<td style="text-align:center">4byte 실수</td>
+<td style="text-align:center">4</td>
+</tr>
+<tr>
+<td style="text-align:center">float64</td>
+<td style="text-align:center">8byte 실수</td>
+<td style="text-align:center">8</td>
+</tr>
+<tr>
+<td style="text-align:center">complex64</td>
+<td style="text-align:center">float32 실수부와 허수부</td>
+<td style="text-align:center">8</td>
+</tr>
+<tr>
+<td style="text-align:center">complex128</td>
+<td style="text-align:center">flaot64 실수부와 허수부</td>
+<td style="text-align:center">8</td>
+</tr>
+<tr>
+<td style="text-align:center">int, uint</td>
+<td style="text-align:center">아키텍쳐에 따라 크기가 다름</td>
+<td style="text-align:center">4, 8</td>
+</tr>
+<tr>
+<td style="text-align:center">string</td>
+<td style="text-align:center">(배열을 가리키는 포인터, 배열의 길이)</td>
+<td style="text-align:center">8, 16</td>
+</tr>
+<tr>
+<td style="text-align:center">byte</td>
+<td style="text-align:center">alias for uint8</td>
+<td style="text-align:center">1</td>
+</tr>
+<tr>
+<td style="text-align:center">rune</td>
+<td style="text-align:center">alias for int32</td>
+<td style="text-align:center">4</td>
+</tr>
+<tr>
+<td style="text-align:center">uintptr</td>
+<td style="text-align:center">포인터 값 저장을 위함</td>
+<td style="text-align:center">4</td>
+</tr>
+</tbody>
+</table></div>
+<p>자료형에 관한 공부는 다음을 참고해도 좋다. <a class="link" href="https://research.swtch.com/godata#Strings"  target="_blank" rel="noopener"
+    >Go Data Type</a></p>
+<p>doc이나 다른 자료들이 설명하는 자료형에는 위의 설명 외에도 slice, map 등이 있고, type을 묶는(표현이 맞는지 모르겠다.) struct, method 집합인 interface와 같이 더 많은 기능이 있다. 지금 표에 있는 것이 기본적이기도 하지만, 전부는 아니라는 소리다. 이후에 하나씩 따로 공부해야 할 만큼 큰 부분들이라고 생각해서 지금은 적지 않았다.</p>
+<h4 id="type-conversion-형변환">Type conversion, 형변환&hellip;?</h4>
+<p>Go 에서는 암시적 형변환이 없다. C++, Java 같은 언어들은 암시적 형변환을 지원하지만, Go 언어에서는 명시적 형변환을 해야 한다.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-go" data-lang="go"><span class="c1">// Go program to find the
+</span><span class="c1">// average of numbers
+</span><span class="c1"></span><span class="kn">package</span> <span class="nx">main</span>
+
+<span class="kn">import</span> <span class="s">&#34;fmt&#34;</span>
+
+<span class="kd">func</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+	<span class="c1">// taking the required
+</span><span class="c1"></span>	<span class="c1">// data into variables
+</span><span class="c1"></span>	<span class="kd">var</span> <span class="nx">totalsum</span> <span class="kt">int</span> <span class="p">=</span> <span class="mi">846</span>
+	<span class="kd">var</span> <span class="nx">number</span> <span class="kt">int</span> <span class="p">=</span> <span class="mi">19</span>
+	<span class="kd">var</span> <span class="nx">avg</span> <span class="kt">float32</span>
+
+	<span class="c1">// explicit type conversion
+</span><span class="c1"></span>	<span class="nx">avg</span> <span class="p">=</span> <span class="nb">float32</span><span class="p">(</span><span class="nx">totalsum</span><span class="p">)</span> <span class="o">/</span> <span class="nb">float32</span><span class="p">(</span><span class="nx">number</span><span class="p">)</span>
+
+	<span class="c1">// Displaying the result
+</span><span class="c1"></span>	<span class="nx">fmt</span><span class="p">.</span><span class="nf">Printf</span><span class="p">(</span><span class="s">&#34;Average = %f\n&#34;</span><span class="p">,</span> <span class="nx">avg</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><p><a class="link" href="https://www.geeksforgeeks.org/type-casting-or-type-conversion-in-golang/"  target="_blank" rel="noopener"
+    >Type Conversion in geeksforgeeks</a></p>
+<h3 id="마무리">마무리</h3>
+<p>간단하게 정리해보았다. 기본적인 hello, world 분석이랑 변수 사용, 자료형에 대해서 알아보았다.
+아마 다음 글은 제어문과 관련된 문법일 것 같다. 정리하면서 다시 공부하니까 복습 효과가 잘 나오는 것 같다. 그럼 이만 줄인다.</p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/Blog/tags/study/">Study</a>
+        
+            <a href="/Blog/tags/language/">Language</a>
+        
+            <a href="/Blog/tags/go/">Go</a>
+        
+            <a href="/Blog/tags/syntax/">Syntax</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+
+    
+        <link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/katex.min.css"integrity="sha384-RZU/ijkSsFbcmivfdRBQDtwuwVqK7GMOw6IMvKyeWL2K5UAlyp6WonmB8m7Jd0Hn"crossorigin="anonymous"
+            ><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/katex.min.js"integrity="sha384-pK1WpvzWVBQiP0/GjnvRxV4mOb0oxFuyRxJlk6vVw146n3egcN5C925NCP7a7BY8"crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/contrib/auto-render.min.js"integrity="sha384-vZTG03m&#43;2yp6N6BNi5iM4rW4oIwk5DfcNdFfxkk9ZWpDriOkXX8voJBFrAO7MpVl"crossorigin="anonymous"
+                defer
+                >
+            </script><script>
+    window.addEventListener("DOMContentLoaded", () => {
+        renderMathInElement(document.querySelector(`.article-content`), {
+            delimiters: [
+                { left: "$$", right: "$$", display: true },
+                { left: "$", right: "$", display: false },
+                { left: "\\(", right: "\\)", display: false },
+                { left: "\\[", right: "\\]", display: true }
+            ]
+        });})
+</script>
+    
+</article>
+
+    
+
+    
+
+<aside class="related-contents--wrapper">
+    <h2 class="section-title">관련 글</h2>
+    <div class="related-contents">
+        <div class="flex article-list--tile">
+            
+                
+<article class="">
+    <a href="/Blog/p/gostudy-1/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">GoStudy - 1</h2>
+        </div>
+    </a>
+</article>
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+        2022 Kadrick&#39;s Dev Log
+    </section>
+    
+    <section class="powerby">
+        <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a>로 만듦 <br />
+        <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>의 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.11.0">Stack</a></b> 테마 사용 중
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css"integrity="sha256-c0uckgykQ9v5k&#43;IqViZOZKc47Jn7KQil4/MP3ySA3F8="crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css"integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE="crossorigin="anonymous"
+            >
+
+            </main>
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">목차</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#go-study---syntax---1">Go study - syntax - 1</a>
+      <ol>
+        <li><a href="#hello-world">Hello world!</a></li>
+        <li><a href="#variables-변수">Variables, 변수</a>
+          <ol>
+            <li><a href="#declaration-변수를-사용해보자">Declaration, 변수를 사용해보자.</a></li>
+            <li><a href="#data-type-변수의-그릇">Data Type, 변수의 그릇</a></li>
+            <li><a href="#type-conversion-형변환">Type conversion, 형변환&hellip;?</a></li>
+          </ol>
+        </li>
+        <li><a href="#마무리">마무리</a></li>
+      </ol>
+    </li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js"integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/Blog/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>
