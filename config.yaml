@@ -186,10 +186,18 @@ menu:
           params:
             icon: home
             newTab: false
+
+        - identifier: about
+          name: about
+          weight: -90
+          url: about
+          params:
+            icon: mood-neutral
+            newTab: false
         
         - identifier: archives
           name: Archives
-          weight: -90
+          weight: -80
           url: archives
           params:
             icon: archives
@@ -197,7 +205,7 @@ menu:
 
         - identifier: search
           name: Search
-          weight: -80
+          weight: -70
           url: search
           params:
             icon: search
@@ -240,3 +248,8 @@ markup:
         tabWidth: 4
 
 enableRobotsTXT: true
+
+sitemap:
+  changefreq: monthly
+  filename: sitemap.xml
+  priority: 0.5
