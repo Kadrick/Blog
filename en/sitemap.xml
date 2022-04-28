@@ -1,47 +1,21 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
     <loc>https://kadrick.github.io/Blog/en/categories/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="ko"
-                href="https://kadrick.github.io/Blog/categories/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://kadrick.github.io/Blog/en/categories/"
-                />
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://kadrick.github.io/Blog/en/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="ko"
-                href="https://kadrick.github.io/Blog/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://kadrick.github.io/Blog/en/"
-                />
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://kadrick.github.io/Blog/en/tags/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="ko"
-                href="https://kadrick.github.io/Blog/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://kadrick.github.io/Blog/en/tags/"
-                />
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
   </url>
   
 </urlset>
