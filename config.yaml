@@ -48,7 +48,7 @@ params:
         lastUpdated: Jan 02, 2006 15:04 MST
 
     sidebar:
-        emoji: 🍥
+        emoji: 🥳
         subtitle: No pain, no gain
         avatar:
             enabled: true
@@ -217,6 +217,12 @@ menu:
           url: https://github.com/Kadrick
           params:
               icon: brand-github
+
+        - identifier: gamil
+          name: Gmail
+          url: mailto:kbk2581553@gmail.com
+          params:
+              icon: brand-gmail
 
 related:
     includeNewer: true
