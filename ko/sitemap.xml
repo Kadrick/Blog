@@ -1,7 +1,84 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://kadrick.github.io/Blog/tags/algorithm/</loc>
+    <lastmod>2022-05-02T09:05:51+09:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kadrick.github.io/Blog/tags/bfs/</loc>
+    <lastmod>2022-05-02T09:05:51+09:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kadrick.github.io/Blog/p/boj-2479/</loc>
+    <lastmod>2022-05-02T09:05:51+09:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kadrick.github.io/Blog/categories/</loc>
+    <lastmod>2022-05-02T09:05:51+09:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://kadrick.github.io/Blog/</loc>
+    <lastmod>2022-05-02T09:05:51+09:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kadrick.github.io/Blog/categories/koi/</loc>
+    <lastmod>2022-05-02T09:05:51+09:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kadrick.github.io/Blog/tags/map/</loc>
+    <lastmod>2022-05-02T09:05:51+09:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kadrick.github.io/Blog/post/</loc>
+    <lastmod>2022-05-02T09:05:51+09:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kadrick.github.io/Blog/categories/problem-solving/</loc>
+    <lastmod>2022-05-02T09:05:51+09:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kadrick.github.io/Blog/tags/study/</loc>
+    <lastmod>2022-05-02T09:05:51+09:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kadrick.github.io/Blog/tags/</loc>
+    <lastmod>2022-05-02T09:05:51+09:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://kadrick.github.io/Blog/about/</loc>
     <lastmod>2022-04-21T09:33:14+09:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -15,20 +92,6 @@
   </url>
   
   <url>
-    <loc>https://kadrick.github.io/Blog/about/</loc>
-    <lastmod>2022-04-21T09:33:14+09:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://kadrick.github.io/Blog/tags/algorithm/</loc>
-    <lastmod>2022-04-13T13:28:41+09:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>https://kadrick.github.io/Blog/p/boj-1162/</loc>
     <lastmod>2022-04-13T13:28:41+09:00</lastmod>
     <changefreq>monthly</changefreq>
@@ -36,42 +99,7 @@
   </url>
   
   <url>
-    <loc>https://kadrick.github.io/Blog/categories/</loc>
-    <lastmod>2022-04-13T13:28:41+09:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>https://kadrick.github.io/Blog/tags/dijkstra/</loc>
-    <lastmod>2022-04-13T13:28:41+09:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://kadrick.github.io/Blog/post/</loc>
-    <lastmod>2022-04-13T13:28:41+09:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://kadrick.github.io/Blog/categories/problem-solving/</loc>
-    <lastmod>2022-04-13T13:28:41+09:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://kadrick.github.io/Blog/tags/study/</loc>
-    <lastmod>2022-04-13T13:28:41+09:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://kadrick.github.io/Blog/tags/</loc>
     <lastmod>2022-04-13T13:28:41+09:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
