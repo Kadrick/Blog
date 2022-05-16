@@ -203,9 +203,17 @@ menu:
             icon: archives
             newTab: false
 
+        - identifier: Tags
+          name: Tags
+          weight: -70
+          url: tags
+          params:
+            icon: tags
+            newTab: false
+
         - identifier: search
           name: Search
-          weight: -70
+          weight: -60
           url: search
           params:
             icon: search
