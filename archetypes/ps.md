@@ -1,6 +1,6 @@
 ---
 title: "{{ replace .Name "-" " " | title }}"
-description:
+description:    "Problem Name"
 date: {{ .Date }}
 image: "boj-banner.png"
 
@@ -18,3 +18,18 @@ hidden: false
 comments: false
 draft: true
 ---
+
+## BOJ {ProblemID} {ProblemName}
+
+[link](https://boj.kr/{problemId})
+
+### 문제
+
+### 풀이
+
+### 소스코드
+
+> [C++](https://github.com/Kadrick/PS/blob/main/BOJ/{problemId}.cpp)
+
+```cpp
+```
