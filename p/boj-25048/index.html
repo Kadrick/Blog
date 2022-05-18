@@ -1,0 +1,869 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='랜선 연결'><title>BOJ 25048</title>
+
+<link rel='canonical' href='https://kadrick.github.io/Blog/p/boj-25048/'>
+
+<link rel="stylesheet" href="/Blog/scss/style.min.5803a057c2bf108de9a3680331bf905cd2abd24f8e24924837ba04bbbefabddf.css"><meta property='og:title' content='BOJ 25048'>
+<meta property='og:description' content='랜선 연결'>
+<meta property='og:url' content='https://kadrick.github.io/Blog/p/boj-25048/'>
+<meta property='og:site_name' content='Kadrick&#39;s Dev Log'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Study' /><meta property='article:tag' content='Algorithm' /><meta property='article:tag' content='DP' /><meta property='article:published_time' content='2022-05-17T09:38:30&#43;09:00'/><meta property='article:modified_time' content='2022-05-17T09:38:30&#43;09:00'/><meta property='og:image' content='https://kadrick.github.io/Blog/p/boj-25048/boj-banner.png' />
+<meta name="twitter:title" content="BOJ 25048">
+<meta name="twitter:description" content="랜선 연결"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://kadrick.github.io/Blog/p/boj-25048/boj-banner.png' />
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "dark");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="메뉴 여닫기">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/Blog/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/Blog/img/avatar_huf3e712f7030cb1d1f6bdcb05366a35b1_3079532_300x0_resize_box_2.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+                    <span class="emoji">🥳</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/Blog">Kadrick&#39;s Dev Log</a></h1>
+            <h2 class="site-description">No pain, no gain</h2>
+        </div>
+    </header><ol class="social-menu">
+            
+                <li>
+                    <a 
+                        href='https://github.com/Kadrick'
+                        target="_blank"
+                        title="GitHub"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='mailto:kbk2581553@gmail.com'
+                        target="_blank"
+                        title="Gmail"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-gmail" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <desc>Download more icon variants from https://tabler-icons.io/i/brand-gmail</desc>
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M16 20h3a1 1 0 0 0 1 -1v-14a1 1 0 0 0 -1 -1h-3v16z" />
+  <path d="M5 20h3v-16h-3a1 1 0 0 0 -1 1v14a1 1 0 0 0 1 1z" />
+  <path d="M16 4l-4 4l-4 -4" />
+  <path d="M4 6.5l8 7.5l8 -7.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+
+        <li >
+            <a href='/Blog/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>Home</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/Blog/about' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-mood-neutral" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <circle cx="12" cy="12" r="9" />
+  <line x1="9" y1="10" x2="9.01" y2="10" />
+  <line x1="15" y1="10" x2="15.01" y2="10" />
+</svg>
+
+
+
+                
+                <span>about</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/Blog/archives' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>Archives</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/Blog/tags' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-tags" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <desc>Download more icon variants from https://tabler-icons.io/i/tags</desc>
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M7.859 6h-2.834a2.025 2.025 0 0 0 -2.025 2.025v2.834c0 .537 .213 1.052 .593 1.432l6.116 6.116a2.025 2.025 0 0 0 2.864 0l2.834 -2.834a2.025 2.025 0 0 0 0 -2.864l-6.117 -6.116a2.025 2.025 0 0 0 -1.431 -.593z" />
+  <path d="M17.573 18.407l2.834 -2.834a2.025 2.025 0 0 0 0 -2.864l-7.117 -7.116" />
+  <path d="M6 9h-.01" />
+</svg>
+
+
+
+                
+                <span>Tags</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/Blog/search' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>Search</span>
+            </a>
+        </li>
+        
+
+        <div class="menu-bottom-section">
+                <li id="i18n-switch">  
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-language" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M4 5h7" />
+  <path d="M9 3v2c0 4.418 -2.239 8 -5 8" />
+  <path d="M5 9c-.003 2.144 2.952 3.908 6.7 4" />
+  <path d="M12 20l4 -9l4 9" />
+  <path d="M19.1 18h-6.2" />
+</svg>
+
+
+
+                    <select name="language" onchange="window.location.href = this.selectedOptions[0].value">
+                        
+                            <option value="https://kadrick.github.io/Blog/" selected>Korean</option>
+                        
+                            <option value="https://kadrick.github.io/Blog/en/" >English</option>
+                        
+                    </select>
+                </li>
+            
+            
+            
+                <li id="dark-mode-toggle">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <span>다크 모드</span>
+                </li>
+            
+        </div>
+    </ol>
+</aside>
+<main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/Blog/p/boj-25048/">
+                <img src="/Blog/p/boj-25048/boj-banner_hua8dbec156adc816fe5043c41cdb6daaf_110403_800x0_resize_box_2.png"
+                        srcset="/Blog/p/boj-25048/boj-banner_hua8dbec156adc816fe5043c41cdb6daaf_110403_800x0_resize_box_2.png 800w, /Blog/p/boj-25048/boj-banner_hua8dbec156adc816fe5043c41cdb6daaf_110403_1600x0_resize_box_2.png 1600w"
+                        width="800" 
+                        height="187" 
+                        loading="lazy"
+                        alt="Featured image of post BOJ 25048" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/Blog/categories/problem-solving/" >
+                Problem Solving
+            </a>
+        
+            <a href="/Blog/categories/2022-dgist-%ED%98%84%ED%92%8D%EC%A0%84%EC%82%B0%EB%B0%B0-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EB%8C%80%ED%9A%8C/" >
+                2022 DGIST 현풍전산배 알고리즘 대회
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/Blog/p/boj-25048/">BOJ 25048</a>
+        </h2>
+    
+        
+        <h3 class="article-subtitle">
+            랜선 연결
+        </h3>
+        
+    </div>
+
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">May 17, 2022</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    2 분 정도
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+</header>
+
+    <section class="article-content">
+    
+    
+    <h2 id="boj-25048-랜선-연결">BOJ 25048 랜선 연결</h2>
+<p><a class="link" href="https://boj.kr/25048"  target="_blank" rel="noopener"
+    >link</a></p>
+<h3 id="문제">문제</h3>
+<p>$N$ 개의 스위치를 이용해 $M$ 개의 컴퓨터에 인터넷 공급을 한다.
+스위치는 $a_i$ 개의 포트가 있고 $b_i$ 의 설치비용이 발생한다.
+스위치끼리 사이클이 없고, 남는 포트가 없으며, 최소 비용으로 연결하는게 목적이다.
+가능하면 최소비용 출력, 아니면 -1을 출력한다.</p>
+<h3 id="풀이">풀이</h3>
+<p>스위치의 하나의 포트엔 반드시 인터넷이 들어가야 한다.
+그러면 남은 포트를 생각해보자. 남은 포트엔 스위치 혹은 컴퓨터가 자리 잡는다. 나눠서 생각해보자.</p>
+<ul>
+<li>스위치가 연결되면 -&gt; (하나의 포트엔 인터넷, 남은 자리는 스위치 혹은 컴퓨터&hellip;)</li>
+<li>컴퓨터가 연결되면 -&gt; 연결할 컴퓨터가 줄어든다.</li>
+</ul>
+<p>스위치가 연결되면 같은 문제가 반복된다. 컴퓨터가 연결되면 연결할 컴퓨터의 수가 줄어든다.
+여기서 dp로 풀 수 있겠구나 싶었다.</p>
+<blockquote>
+<p><em><strong>DP[i] = i개의 컴퓨터를 설치했을 때 최소 비용</strong></em></p>
+</blockquote>
+<p>각 스위치는 인터넷 포트를 제외한 모든 포트에 컴퓨터가 연결된 것이 기저 사례이고, 하나씩 스위치로 바꿔보는 것만 구현하면 문제가 쉽게 풀린다.
+스위치를 꼽는 건 부분 문제니까 스위치를 안 꼽으면 부분문제가 없으니 기저 사례가 된다.</p>
+<h3 id="소스코드">소스코드</h3>
+<blockquote>
+<p><a class="link" href="https://github.com/Kadrick/PS/blob/main/BOJ/25048.cpp"  target="_blank" rel="noopener"
+    >C++</a></p>
+</blockquote>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span><span class="lnt">54
+</span><span class="lnt">55
+</span><span class="lnt">56
+</span><span class="lnt">57
+</span><span class="lnt">58
+</span><span class="lnt">59
+</span><span class="lnt">60
+</span><span class="lnt">61
+</span><span class="lnt">62
+</span><span class="lnt">63
+</span><span class="lnt">64
+</span><span class="lnt">65
+</span><span class="lnt">66
+</span><span class="lnt">67
+</span><span class="lnt">68
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="cm">/**
+</span><span class="cm"> * @file 25048.cpp
+</span><span class="cm"> * @author Kadrick (kbk2581553@gmail.com)
+</span><span class="cm"> * @brief DP
+</span><span class="cm"> * @version 0.1
+</span><span class="cm"> * @date 2022-05-03 15:35
+</span><span class="cm"> *
+</span><span class="cm"> * @copyright Copyright (c) 2022
+</span><span class="cm"> *
+</span><span class="cm"> */</span>
+<span class="cp">#include</span> <span class="cpf">&lt;bits/stdc++.h&gt;</span><span class="cp">
+</span><span class="cp"></span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+<span class="cp">#define fastio                 \
+</span><span class="cp">  ios::sync_with_stdio(false); \
+</span><span class="cp">  cin.tie(0);
+</span><span class="cp">#define endl &#39;\n&#39;
+</span><span class="cp"></span>
+<span class="cp">#define int long long
+</span><span class="cp"></span>
+<span class="kt">int</span> <span class="n">n</span><span class="p">,</span> <span class="n">m</span><span class="p">;</span>
+<span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">netswitch</span><span class="p">,</span> <span class="n">cost</span><span class="p">;</span>
+<span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">dp</span><span class="p">;</span>
+
+<span class="kt">int32_t</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="n">fastio</span><span class="p">;</span>
+
+  <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">n</span><span class="p">;</span>
+  <span class="n">netswitch</span><span class="p">.</span><span class="n">resize</span><span class="p">(</span><span class="n">n</span><span class="p">);</span>
+  <span class="n">cost</span><span class="p">.</span><span class="n">resize</span><span class="p">(</span><span class="n">n</span><span class="p">);</span>
+
+  <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+    <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">netswitch</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&gt;&gt;</span> <span class="n">cost</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+
+  <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">m</span><span class="p">;</span>
+
+  <span class="k">if</span> <span class="p">(</span><span class="n">m</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="mi">0</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+  <span class="k">else</span>
+  <span class="p">{</span>
+    <span class="n">dp</span><span class="p">.</span><span class="n">resize</span><span class="p">(</span><span class="n">m</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">LLONG_MAX</span><span class="p">);</span>
+
+    <span class="c1">// dp[n] = n개의 컴퓨터를 설치할 때 최소 비용
+</span><span class="c1"></span>    <span class="n">dp</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+    <span class="p">{</span>
+      <span class="c1">// 하나는 인터넷 하나는 다른 공유기 나머지 컴퓨터라고 생각
+</span><span class="c1"></span>      <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="n">m</span> <span class="o">-</span> <span class="p">(</span><span class="n">netswitch</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">-</span> <span class="mi">2</span><span class="p">);</span> <span class="n">j</span> <span class="o">&gt;=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">j</span><span class="o">--</span><span class="p">)</span>
+      <span class="p">{</span>
+        <span class="c1">// 깔끔한 연결이 아님
+</span><span class="c1"></span>        <span class="k">if</span> <span class="p">(</span><span class="n">dp</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">==</span> <span class="n">LLONG_MAX</span><span class="p">)</span>
+          <span class="k">continue</span><span class="p">;</span>
+
+        <span class="c1">// 최소 비용 연결
+</span><span class="c1"></span>        <span class="n">dp</span><span class="p">[</span><span class="n">j</span> <span class="o">+</span> <span class="p">(</span><span class="n">netswitch</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">-</span> <span class="mi">2</span><span class="p">)]</span> <span class="o">=</span> <span class="n">min</span><span class="p">(</span><span class="n">dp</span><span class="p">[</span><span class="n">j</span> <span class="o">+</span> <span class="p">(</span><span class="n">netswitch</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">-</span> <span class="mi">2</span><span class="p">)],</span> <span class="n">dp</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">+</span> <span class="n">cost</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
+      <span class="p">}</span>
+
+      <span class="c1">// 다른 스위치를 꼽지 않고 인터넷과 컴퓨터만 연결되어 있는 경우
+</span><span class="c1"></span>      <span class="k">if</span> <span class="p">(</span><span class="n">netswitch</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">-</span> <span class="mi">1</span> <span class="o">&lt;=</span> <span class="n">m</span><span class="p">)</span>
+        <span class="n">dp</span><span class="p">[</span><span class="n">netswitch</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">min</span><span class="p">(</span><span class="n">dp</span><span class="p">[</span><span class="n">netswitch</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">-</span> <span class="mi">1</span><span class="p">],</span> <span class="n">cost</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
+    <span class="p">}</span>
+
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="p">(</span><span class="n">dp</span><span class="p">[</span><span class="n">m</span><span class="p">]</span> <span class="o">==</span> <span class="n">LLONG_MAX</span> <span class="o">?</span> <span class="o">-</span><span class="mi">1</span> <span class="o">:</span> <span class="n">dp</span><span class="p">[</span><span class="n">m</span><span class="p">])</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+  <span class="p">}</span>
+
+  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div>
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/Blog/tags/study/">Study</a>
+        
+            <a href="/Blog/tags/algorithm/">Algorithm</a>
+        
+            <a href="/Blog/tags/dp/">DP</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+
+    
+        <link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/katex.min.css"integrity="sha384-RZU/ijkSsFbcmivfdRBQDtwuwVqK7GMOw6IMvKyeWL2K5UAlyp6WonmB8m7Jd0Hn"crossorigin="anonymous"
+            ><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/katex.min.js"integrity="sha384-pK1WpvzWVBQiP0/GjnvRxV4mOb0oxFuyRxJlk6vVw146n3egcN5C925NCP7a7BY8"crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/contrib/auto-render.min.js"integrity="sha384-vZTG03m&#43;2yp6N6BNi5iM4rW4oIwk5DfcNdFfxkk9ZWpDriOkXX8voJBFrAO7MpVl"crossorigin="anonymous"
+                defer
+                >
+            </script><script>
+    window.addEventListener("DOMContentLoaded", () => {
+        renderMathInElement(document.querySelector(`.article-content`), {
+            delimiters: [
+                { left: "$$", right: "$$", display: true },
+                { left: "$", right: "$", display: false },
+                { left: "\\(", right: "\\)", display: false },
+                { left: "\\[", right: "\\]", display: true }
+            ]
+        });})
+</script>
+    
+</article>
+
+    
+
+    
+
+<aside class="related-contents--wrapper">
+    <h2 class="section-title">관련 글</h2>
+    <div class="related-contents">
+        <div class="flex article-list--tile">
+            
+                
+<article class="has-image">
+    <a href="/Blog/p/boj-25046/25047/">
+        
+        
+            <div class="article-image">
+                <img src="/Blog/p/boj-25046/25047/boj-banner.f4d67c2892eea39ed79a4f0123b98081_hua8dbec156adc816fe5043c41cdb6daaf_110403_250x150_fill_box_smart1_2.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post BOJ 25046/25047"
+                        
+                        data-hash="md5-9NZ8KJLuo57Xmk8BI7mAgQ==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">BOJ 25046/25047</h2>
+        </div>
+    </a>
+</article>
+            
+                
+<article class="has-image">
+    <a href="/Blog/p/boj-25045/">
+        
+        
+            <div class="article-image">
+                <img src="/Blog/p/boj-25045/boj-banner.f4d67c2892eea39ed79a4f0123b98081_hua8dbec156adc816fe5043c41cdb6daaf_110403_250x150_fill_box_smart1_2.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post BOJ 25045"
+                        
+                        data-hash="md5-9NZ8KJLuo57Xmk8BI7mAgQ==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">BOJ 25045</h2>
+        </div>
+    </a>
+</article>
+            
+                
+<article class="has-image">
+    <a href="/Blog/p/boj-25044/">
+        
+        
+            <div class="article-image">
+                <img src="/Blog/p/boj-25044/boj-banner.f4d67c2892eea39ed79a4f0123b98081_hua8dbec156adc816fe5043c41cdb6daaf_110403_250x150_fill_box_smart1_2.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post BOJ 25044"
+                        
+                        data-hash="md5-9NZ8KJLuo57Xmk8BI7mAgQ==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">BOJ 25044</h2>
+        </div>
+    </a>
+</article>
+            
+                
+<article class="has-image">
+    <a href="/Blog/p/boj-8982/">
+        
+        
+            <div class="article-image">
+                <img src="/Blog/p/boj-8982/boj-banner.f4d67c2892eea39ed79a4f0123b98081_hua8dbec156adc816fe5043c41cdb6daaf_110403_250x150_fill_box_smart1_2.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post BOJ 8982"
+                        
+                        data-hash="md5-9NZ8KJLuo57Xmk8BI7mAgQ==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">BOJ 8982</h2>
+        </div>
+    </a>
+</article>
+            
+                
+<article class="has-image">
+    <a href="/Blog/p/boj-2672/">
+        
+        
+            <div class="article-image">
+                <img src="/Blog/p/boj-2672/boj-banner.f4d67c2892eea39ed79a4f0123b98081_hua8dbec156adc816fe5043c41cdb6daaf_110403_250x150_fill_box_smart1_2.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post BOJ 2672"
+                        
+                        data-hash="md5-9NZ8KJLuo57Xmk8BI7mAgQ==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">BOJ 2672</h2>
+        </div>
+    </a>
+</article>
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+        2022 Kadrick&#39;s Dev Log
+    </section>
+    
+    <section class="powerby">
+        <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a>로 만듦 <br />
+        <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>의 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.11.0">Stack</a></b> 테마 사용 중
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css"integrity="sha256-c0uckgykQ9v5k&#43;IqViZOZKc47Jn7KQil4/MP3ySA3F8="crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css"integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE="crossorigin="anonymous"
+            >
+
+            </main>
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">목차</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#boj-25048-랜선-연결">BOJ 25048 랜선 연결</a>
+      <ol>
+        <li><a href="#문제">문제</a></li>
+        <li><a href="#풀이">풀이</a></li>
+        <li><a href="#소스코드">소스코드</a></li>
+      </ol>
+    </li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js"integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/Blog/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

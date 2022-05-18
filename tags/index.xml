@@ -6,10 +6,10 @@
         <description>Recent content in Tags on Kadrick&#39;s Dev Log</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Mon, 16 May 2022 11:18:28 +0900</lastBuildDate><atom:link href="https://kadrick.github.io/Blog/tags/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Tue, 17 May 2022 09:38:46 +0900</lastBuildDate><atom:link href="https://kadrick.github.io/Blog/tags/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Algorithm</title>
         <link>https://kadrick.github.io/Blog/tags/algorithm/</link>
-        <pubDate>Mon, 16 May 2022 11:18:28 +0900</pubDate>
+        <pubDate>Tue, 17 May 2022 09:38:46 +0900</pubDate>
         
         <guid>https://kadrick.github.io/Blog/tags/algorithm/</guid>
         <description></description>
@@ -17,7 +17,7 @@
         <item>
         <title>Simulation</title>
         <link>https://kadrick.github.io/Blog/tags/simulation/</link>
-        <pubDate>Mon, 16 May 2022 11:18:28 +0900</pubDate>
+        <pubDate>Tue, 17 May 2022 09:38:46 +0900</pubDate>
         
         <guid>https://kadrick.github.io/Blog/tags/simulation/</guid>
         <description></description>
@@ -25,9 +25,49 @@
         <item>
         <title>Study</title>
         <link>https://kadrick.github.io/Blog/tags/study/</link>
-        <pubDate>Mon, 16 May 2022 11:18:28 +0900</pubDate>
+        <pubDate>Tue, 17 May 2022 09:38:46 +0900</pubDate>
         
         <guid>https://kadrick.github.io/Blog/tags/study/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>DP</title>
+        <link>https://kadrick.github.io/Blog/tags/dp/</link>
+        <pubDate>Tue, 17 May 2022 09:38:30 +0900</pubDate>
+        
+        <guid>https://kadrick.github.io/Blog/tags/dp/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Bitmask</title>
+        <link>https://kadrick.github.io/Blog/tags/bitmask/</link>
+        <pubDate>Tue, 17 May 2022 09:38:01 +0900</pubDate>
+        
+        <guid>https://kadrick.github.io/Blog/tags/bitmask/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Bruteforcing</title>
+        <link>https://kadrick.github.io/Blog/tags/bruteforcing/</link>
+        <pubDate>Tue, 17 May 2022 09:38:01 +0900</pubDate>
+        
+        <guid>https://kadrick.github.io/Blog/tags/bruteforcing/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Greedy</title>
+        <link>https://kadrick.github.io/Blog/tags/greedy/</link>
+        <pubDate>Tue, 17 May 2022 09:36:09 +0900</pubDate>
+        
+        <guid>https://kadrick.github.io/Blog/tags/greedy/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Sorting</title>
+        <link>https://kadrick.github.io/Blog/tags/sorting/</link>
+        <pubDate>Tue, 17 May 2022 09:36:09 +0900</pubDate>
+        
+        <guid>https://kadrick.github.io/Blog/tags/sorting/</guid>
         <description></description>
         </item>
         <item>
@@ -55,7 +95,7 @@
         <description></description>
         </item>
         <item>
-        <title>dijkstra</title>
+        <title>Dijkstra</title>
         <link>https://kadrick.github.io/Blog/tags/dijkstra/</link>
         <pubDate>Wed, 13 Apr 2022 13:28:41 +0900</pubDate>
         
