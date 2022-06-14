@@ -13,7 +13,7 @@
         
         <guid>https://kadrick.github.io/Blog/p/gostudy-2/</guid>
         <description>&lt;h2 id=&#34;go-study---syntax---1&#34;&gt;Go study - syntax - 1&lt;/h2&gt;
-&lt;h3 id=&#34;hello-world&#34;&gt;Hello world!&lt;/h3&gt;
+&lt;h3 id=&#34;hello-world&#34;&gt;Hello world&lt;/h3&gt;
 &lt;p&gt;다음은 Hello, world! 이다.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -33,7 +33,7 @@
 &lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;fmt&amp;#34;&lt;/span&gt;
 
 &lt;span class=&#34;kd&#34;&gt;func&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
-	&lt;span class=&#34;nx&#34;&gt;fmt&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;Println&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Hello, world&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+  &lt;span class=&#34;nx&#34;&gt;fmt&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;Println&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Hello, world&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
 &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
@@ -145,7 +145,7 @@ go get github.com/labstack/echo/v4
 &lt;hr&gt;
 &lt;p&gt;다시 Hello, world!로 돌아가면 ;(세미콜론)도 없는 것을 확인할 수 있다. 컴파일 시에 문장 끝에 자동으로 ;을 삽입한다. 명시해도 상관없는 것으로 알고 있는데, vscode 설치 후 저장 시에 어차피 붙어있는 ;도 없애기에 앞으로는 ;없이 코드를 작성할 것 같다.&lt;/p&gt;
 &lt;hr&gt;
-&lt;p&gt;주석은 C 처럼 /* */ 사이에 작성해도 되고, //을 사용해도 된다.&lt;/p&gt;
+&lt;p&gt;주석은 C 처럼 /**/ 사이에 작성해도 되고, //을 사용해도 된다.&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;Go 에서는 {}(중괄호)의 위치를 따진다. 함수 선언, 제어문 뒤에 오는 여는 중괄호는 반드시 줄 바꿈을 하지 않고 바로 뒤에 작성해야 한다. 말로 하면 어렵다. 예시를 보면 바로 이해할 수 있다.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
@@ -175,20 +175,20 @@ go get github.com/labstack/echo/v4
 &lt;/span&gt;&lt;span class=&#34;cm&#34;&gt;// 이런 형식이 불가능하다.
 &lt;/span&gt;&lt;span class=&#34;cm&#34;&gt;func main() 
 &lt;/span&gt;&lt;span class=&#34;cm&#34;&gt;{
-&lt;/span&gt;&lt;span class=&#34;cm&#34;&gt;	fmt.Println(&amp;#34;Hello, world&amp;#34;)
+&lt;/span&gt;&lt;span class=&#34;cm&#34;&gt; fmt.Println(&amp;#34;Hello, world&amp;#34;)
 &lt;/span&gt;&lt;span class=&#34;cm&#34;&gt;}
 &lt;/span&gt;&lt;span class=&#34;cm&#34;&gt;*/&lt;/span&gt;
 
 &lt;span class=&#34;kd&#34;&gt;func&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
-	&lt;span class=&#34;nx&#34;&gt;fmt&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;Println&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Hello, world&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+  &lt;span class=&#34;nx&#34;&gt;fmt&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;Println&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Hello, world&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
 &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;hr&gt;
 &lt;h3 id=&#34;variables-변수&#34;&gt;Variables, 변수&lt;/h3&gt;
 &lt;p&gt;Go 에서의 변수의 사용과 자료형에 대해서 알아보자.&lt;/p&gt;
-&lt;h4 id=&#34;declaration-변수를-사용해보자&#34;&gt;Declaration, 변수를 사용해보자.&lt;/h4&gt;
-&lt;p&gt;기본적인 변수 선언은 키워드 &lt;strong&gt;var, const&lt;/strong&gt; 을 통해서 진행한다. &amp;ldquo;&amp;lt;var | const&amp;gt; &amp;lt;변수 이름&amp;gt; &amp;lt;자료형&amp;gt;&amp;rdquo; 형식으로 사용한다. var은 일반적인 변수, cosnt는 상수를 의미한다.&lt;/p&gt;
+&lt;h4 id=&#34;declaration-변수를-사용해보자&#34;&gt;Declaration, 변수를 사용해보자&lt;/h4&gt;
+&lt;p&gt;기본적인 변수 선언은 키워드 &lt;strong&gt;var, const&lt;/strong&gt; 을 통해서 진행한다. &amp;ldquo;&amp;lt; var | const &amp;gt; &amp;lt; 변수 이름 &amp;gt; &amp;lt; 자료형 &amp;gt;&amp;rdquo; 형식으로 사용한다. var은 일반적인 변수, cosnt는 상수를 의미한다.&lt;/p&gt;
 &lt;p&gt;선언과 정의를 동시에 하기 위해서 &amp;ldquo;:=&amp;rdquo; 을 사용할 수 있는데 전역으로 사용은 불가능하다.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -216,13 +216,13 @@ go get github.com/labstack/echo/v4
 &lt;span class=&#34;kd&#34;&gt;const&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;num3&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;4&lt;/span&gt;
 
 &lt;span class=&#34;kd&#34;&gt;func&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
-    &lt;span class=&#34;c1&#34;&gt;// 변수 선언시 초기화 하지 않으면 자동으로 자료형에 맞는 기본값으로 초기화
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;    &lt;span class=&#34;c1&#34;&gt;// int: 0, bool: flase 로 초기화 된다. string은 빈문자열 이런 식으로...
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;	&lt;span class=&#34;kd&#34;&gt;var&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;num1&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt;
-	&lt;span class=&#34;kd&#34;&gt;var&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;num2&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;
-	&lt;span class=&#34;nx&#34;&gt;num1&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;
+  &lt;span class=&#34;c1&#34;&gt;// 변수 선언시 초기화 하지 않으면 자동으로 자료형에 맞는 기본값으로 초기화
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;  &lt;span class=&#34;c1&#34;&gt;// int: 0, bool: flase 로 초기화 된다. string은 빈문자열 이런 식으로...
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;  &lt;span class=&#34;kd&#34;&gt;var&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;num1&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt;
+  &lt;span class=&#34;nx&#34;&gt;vsar&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;num2&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;
+  &lt;span class=&#34;nx&#34;&gt;num1&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;
 
-	&lt;span class=&#34;nx&#34;&gt;fmt&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;Printf&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;%d %d&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;num1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;num2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;num3&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+  &lt;span class=&#34;nx&#34;&gt;fmt&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;Printf&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;%d %d&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;num1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;num2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;num3&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
 &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
@@ -344,7 +344,7 @@ go get github.com/labstack/echo/v4
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;자료형에 관한 공부는 다음을 참고해도 좋다. &lt;a class=&#34;link&#34; href=&#34;https://research.swtch.com/godata#Strings&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+&lt;p&gt;자료형에 관한 공부는 다음을 참고해도 좋다. &lt;a class=&#34;link&#34; href=&#34;https://research.swtch.com/godata&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Go Data Type&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;doc이나 다른 자료들이 설명하는 자료형에는 위의 설명 외에도 slice, map 등이 있고, type을 묶는(표현이 맞는지 모르겠다.) struct, method 집합인 interface와 같이 더 많은 기능이 있다. 지금 표에 있는 것이 기본적이기도 하지만, 전부는 아니라는 소리다. 이후에 하나씩 따로 공부해야 할 만큼 큰 부분들이라고 생각해서 지금은 적지 않았다.&lt;/p&gt;
 &lt;h4 id=&#34;type-conversion-형변환&#34;&gt;Type conversion, 형변환&amp;hellip;?&lt;/h4&gt;
@@ -379,17 +379,17 @@ go get github.com/labstack/echo/v4
 &lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;fmt&amp;#34;&lt;/span&gt;
 
 &lt;span class=&#34;kd&#34;&gt;func&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
-	&lt;span class=&#34;c1&#34;&gt;// taking the required
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;	&lt;span class=&#34;c1&#34;&gt;// data into variables
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;	&lt;span class=&#34;kd&#34;&gt;var&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;totalsum&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;846&lt;/span&gt;
-	&lt;span class=&#34;kd&#34;&gt;var&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;number&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;19&lt;/span&gt;
-	&lt;span class=&#34;kd&#34;&gt;var&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;avg&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;float32&lt;/span&gt;
+  &lt;span class=&#34;c1&#34;&gt;// taking the required
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;  &lt;span class=&#34;c1&#34;&gt;// data into variables
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;  &lt;span class=&#34;kd&#34;&gt;var&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;totalsum&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;846&lt;/span&gt;
+  &lt;span class=&#34;kd&#34;&gt;var&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;number&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;19&lt;/span&gt;
+  &lt;span class=&#34;kd&#34;&gt;var&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;avg&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;float32&lt;/span&gt;
 
-	&lt;span class=&#34;c1&#34;&gt;// explicit type conversion
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;	&lt;span class=&#34;nx&#34;&gt;avg&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;float32&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;totalsum&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;/&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;float32&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;number&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+  &lt;span class=&#34;c1&#34;&gt;// explicit type conversion
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;  &lt;span class=&#34;nx&#34;&gt;avg&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;float32&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;totalsum&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;/&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;float32&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;number&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
 
-	&lt;span class=&#34;c1&#34;&gt;// Displaying the result
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;	&lt;span class=&#34;nx&#34;&gt;fmt&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;Printf&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Average = %f\n&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;avg&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+  &lt;span class=&#34;c1&#34;&gt;// Displaying the result
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;  &lt;span class=&#34;nx&#34;&gt;fmt&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;Printf&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Average = %f\n&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;avg&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
 &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
@@ -407,7 +407,7 @@ go get github.com/labstack/echo/v4
         
         <guid>https://kadrick.github.io/Blog/p/gostudy-1/</guid>
         <description>&lt;hr&gt;
-&lt;h3 id=&#34;golang은-구글에서-만들었다&#34;&gt;Golang은 구글에서 만들었다.&lt;/h3&gt;
+&lt;h3 id=&#34;golang은-구글에서-만들었다&#34;&gt;Golang은 구글에서 만들었다&lt;/h3&gt;
 &lt;p&gt;구글에서 처음 발표되었고, 만든 이유는 C++이 싫어서라고 알려진 듯하다.&lt;br&gt;
 컴파일 언어이지만 속도는 빠르고, 정적 타입 검사를 한다. 라이브러리도 풍부하다고 한다. (이건 공부하면 알겠지&amp;hellip;)&lt;br&gt;
 특징으로 GoRoutine이라는 메커니즘을 제공한다. 서버 개발용으로 설계된 언어기에 멀티코어 환경에서 병렬 처리를 쉽게 구현할 수 있다고 한다. 배우기도 쉽다는데&amp;hellip;&lt;/p&gt;
