@@ -37,7 +37,7 @@ params:
         - post
     featuredImageField: image
     rssFullContent: true
-    favicon:
+    favicon: favicon.ico
 
     footer:
         since: 2022
@@ -142,19 +142,19 @@ params:
             host:
             id:
     widgets:
-        homepage:
-            - type: search
-            - type: archives
-              params:
-                  limit: 5
-            - type: categories
-              params:
-                  limit: 10
-            - type: tag-cloud
-              params:
-                  limit: 10
+        # homepage:
+        #     - type: search
+        #     - type: archives
+        #       params:
+        #           limit: 5
+        #     - type: categories
+        #       params:
+        #           limit: 10
+        #     - type: tag-cloud
+        #       params:
+        #           limit: 10
         page:
-            - type: toc
+             - type: toc
 
     defaultImage:
         opengraph:
@@ -203,9 +203,17 @@ menu:
             icon: archives
             newTab: false
 
+        - identifier: categories
+          name: Categories
+          weight: -80
+          url: categories
+          params:
+            icon: categories
+            newTab: false
+
         - identifier: Tags
           name: Tags
-          weight: -70
+          weight: -60
           url: tags
           params:
             icon: tags
@@ -213,7 +221,7 @@ menu:
 
         - identifier: search
           name: Search
-          weight: -60
+          weight: -50
           url: search
           params:
             icon: search

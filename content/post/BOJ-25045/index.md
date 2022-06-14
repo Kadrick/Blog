@@ -2,7 +2,7 @@
 title: "BOJ 25045"
 description: "비즈마켓"
 date: 2022-05-17T09:36:09+09:00
-image: "boj-banner.png"
+image:
 
 slug: 
 

@@ -2,7 +2,7 @@
 title: "BOJ 25046/25047"
 description: "사각형 게임"
 date: 2022-05-17T09:38:01+09:00
-image: "boj-banner.png"
+image:
 
 slug: 
 

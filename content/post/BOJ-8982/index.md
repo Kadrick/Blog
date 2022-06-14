@@ -2,7 +2,7 @@
 title: "BOJ 8982"
 description: "수족관 1"
 date: 2022-05-17T09:38:46+09:00
-image: "boj-banner.png"
+image:
 
 slug: 
 

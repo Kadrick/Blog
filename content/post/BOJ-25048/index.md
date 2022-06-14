@@ -2,7 +2,7 @@
 title: "BOJ 25048"
 description: "랜선 연결"
 date: 2022-05-17T09:38:30+09:00
-image: "boj-banner.png"
+image:
 
 slug: 
 

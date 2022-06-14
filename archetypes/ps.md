@@ -2,7 +2,7 @@
 title: "{{ replace .Name "-" " " | title }}"
 description:    "Problem Name"
 date: {{ .Date }}
-image: "boj-banner.png"
+image:
 
 slug: 
 

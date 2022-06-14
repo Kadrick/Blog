@@ -2,7 +2,7 @@
 title: "BOJ 1162"
 description: "도로포장"
 date: 2022-04-13T13:28:41+09:00
-image: "boj-banner.png"
+image:
 
 slug: 
 

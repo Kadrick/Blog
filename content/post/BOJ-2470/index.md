@@ -2,7 +2,7 @@
 title: "BOJ 2470"
 description: "두 용액"
 date: 2022-04-11T21:06:22+09:00
-image: "boj-banner.png"
+image:
 
 slug: 
 

@@ -2,7 +2,7 @@
 title: "BOJ 21924"
 description: "도시 건설"
 date: 2022-04-12T13:07:11+09:00
-image: "boj-banner.png"
+image:
 
 slug: 
 
@@ -33,9 +33,10 @@ draft: false
 MST를 구하는 문제와 다를 것이 없다.
 Kruskal 알고리즘을 사용해서 문제를 풀었다.
 
-### 소스코드 
+### 소스코드
 
 > [C++](https://github.com/Kadrick/PS/blob/main/BOJ/21924.cpp)
+
 ```cpp
 /**
  * @file 21924.cpp

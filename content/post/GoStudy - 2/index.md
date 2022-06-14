@@ -21,7 +21,7 @@ draft: false
 
 ## Go study - syntax - 1
 
-### Hello world!
+### Hello world
 
 다음은 Hello, world! 이다.
 
@@ -32,7 +32,7 @@ package main
 import "fmt"
 
 func main() {
-	fmt.Println("Hello, world")
+  fmt.Println("Hello, world")
 }
 ```
 
@@ -86,9 +86,11 @@ go get github.com/labstack/echo/v4
 ```
 
 Go의 버전이 높다면 get 커맨드로 install이 되지 않는다. **install**을 이용하여야 한다.
+
 ```sh
 go install github.com/labstack/echo/v4@latest
 ```
+
 이런 식으로 사용하면 된다.
 
 ---
@@ -97,7 +99,7 @@ go install github.com/labstack/echo/v4@latest
 
 ---
 
-주석은 C 처럼 /* */ 사이에 작성해도 되고, //을 사용해도 된다.
+주석은 C 처럼 /**/ 사이에 작성해도 되고, //을 사용해도 된다.
 
 ---
 
@@ -112,12 +114,12 @@ import "fmt"
 // 이런 형식이 불가능하다.
 func main() 
 {
-	fmt.Println("Hello, world")
+ fmt.Println("Hello, world")
 }
 */
 
 func main() {
-	fmt.Println("Hello, world")
+  fmt.Println("Hello, world")
 }
 ```
 
@@ -127,9 +129,9 @@ func main() {
 
 Go 에서의 변수의 사용과 자료형에 대해서 알아보자.
 
-#### Declaration, 변수를 사용해보자.
+#### Declaration, 변수를 사용해보자
 
-기본적인 변수 선언은 키워드 **var, const** 을 통해서 진행한다. "<var | const> <변수 이름> <자료형>" 형식으로 사용한다. var은 일반적인 변수, cosnt는 상수를 의미한다.
+기본적인 변수 선언은 키워드 **var, const** 을 통해서 진행한다. "< var | const > < 변수 이름 > < 자료형 >" 형식으로 사용한다. var은 일반적인 변수, cosnt는 상수를 의미한다.
 
 선언과 정의를 동시에 하기 위해서 ":=" 을 사용할 수 있는데 전역으로 사용은 불가능하다.
 
@@ -141,17 +143,17 @@ import "fmt"
 const num3 int = 4
 
 func main() {
-    // 변수 선언시 초기화 하지 않으면 자동으로 자료형에 맞는 기본값으로 초기화
-    // int: 0, bool: flase 로 초기화 된다. string은 빈문자열 이런 식으로...
-	var num1 int
-	var num2 int = 1
-	num1 = 2
+  // 변수 선언시 초기화 하지 않으면 자동으로 자료형에 맞는 기본값으로 초기화
+  // int: 0, bool: flase 로 초기화 된다. string은 빈문자열 이런 식으로...
+  var num1 int
+  vsar num2 int = 1
+  num1 = 2
 
-	fmt.Printf("%d %d", num1+num2, num3)
+  fmt.Printf("%d %d", num1+num2, num3)
 }
 ```
-![실행결과](ret_1.png)
 
+![실행결과](ret_1.png)
 
 #### Data Type, 변수의 그릇
 
@@ -178,7 +180,7 @@ Go의 자료형은 [document](https://go.dev/ref/spec#Types)를 확인하면 알
 |    rune    |            alias for int32            |   4   |
 |  uintptr   |         포인터 값 저장을 위함         |   4   |
 
-자료형에 관한 공부는 다음을 참고해도 좋다. [Go Data Type](https://research.swtch.com/godata#Strings)
+자료형에 관한 공부는 다음을 참고해도 좋다. [Go Data Type](https://research.swtch.com/godata)
 
 doc이나 다른 자료들이 설명하는 자료형에는 위의 설명 외에도 slice, map 등이 있고, type을 묶는(표현이 맞는지 모르겠다.) struct, method 집합인 interface와 같이 더 많은 기능이 있다. 지금 표에 있는 것이 기본적이기도 하지만, 전부는 아니라는 소리다. 이후에 하나씩 따로 공부해야 할 만큼 큰 부분들이라고 생각해서 지금은 적지 않았다.
 
@@ -194,22 +196,23 @@ package main
 import "fmt"
 
 func main() {
-	// taking the required
-	// data into variables
-	var totalsum int = 846
-	var number int = 19
-	var avg float32
+  // taking the required
+  // data into variables
+  var totalsum int = 846
+  var number int = 19
+  var avg float32
 
-	// explicit type conversion
-	avg = float32(totalsum) / float32(number)
+  // explicit type conversion
+  avg = float32(totalsum) / float32(number)
 
-	// Displaying the result
-	fmt.Printf("Average = %f\n", avg)
+  // Displaying the result
+  fmt.Printf("Average = %f\n", avg)
 }
 ```
+
 [Type Conversion in geeksforgeeks](https://www.geeksforgeeks.org/type-casting-or-type-conversion-in-golang/)
 
 ### 마무리
 
-간단하게 정리해보았다. 기본적인 hello, world 분석이랑 변수 사용, 자료형에 대해서 알아보았다. 
+간단하게 정리해보았다. 기본적인 hello, world 분석이랑 변수 사용, 자료형에 대해서 알아보았다.
 아마 다음 글은 제어문과 관련된 문법일 것 같다. 정리하면서 다시 공부하니까 복습 효과가 잘 나오는 것 같다. 그럼 이만 줄인다.

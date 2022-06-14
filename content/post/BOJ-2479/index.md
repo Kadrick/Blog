@@ -2,7 +2,7 @@
 title: "BOJ 2479"
 description: "경로 찾기"
 date: 2022-05-02T09:05:51+09:00
-image: "boj-banner.png"
+image:
 
 slug: 
 

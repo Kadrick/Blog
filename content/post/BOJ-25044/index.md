@@ -2,7 +2,7 @@
 title: "BOJ 25044"
 description: "에어컨"
 date: 2022-05-16T11:18:28+09:00
-image: "boj-banner.png"
+image:
 
 slug: 
 

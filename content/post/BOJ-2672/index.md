@@ -2,7 +2,7 @@
 title: "BOJ 2672"
 description: "여러 직사각형의 전체 면적 구하기"
 date: 2022-05-04T13:06:58+09:00
-image: "boj-banner.png"
+image:
 
 slug: 
 
